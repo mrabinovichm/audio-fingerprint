@@ -1,0 +1,10 @@
+seno.m:
+	Contiene la función generadora de senos.
+	Se pasan como parámetros la frecuencia, el vector de tiempos y la fase.
+
+zcr.m:
+	Función que calcula los cruces por cero de la señal que se le pasa como parámtro.
+
+main.m:
+	Llama a las anteriores funciones, muestra en pantalla la cantidad de cruces por cero de la señal y grafica 
+	la señal sinusoidal que fue generada.
