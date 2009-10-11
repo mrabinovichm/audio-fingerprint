@@ -1,0 +1,2 @@
+Los controladores de display LCD16x2, HD44780 de Hitachi y KS0066 de Samsung son compatibles.
+Usan las mismas instrucciones de configuración (clear, return home, etc).

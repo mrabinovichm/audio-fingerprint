@@ -1,0 +1,108 @@
+# EESchema Netlist Version 1.1 created  11/10/2009-19:05:11
+(
+ ( 4A894B0E LEDV D1 LED
+  ( 1 N-000029 )
+  ( 2 GND_1 )
+ )
+ ( 4A89A0B4 PIN_ARRAY_3X1 K1 CONN_3
+  ( 1 BL_1 )
+  ( 2 ? )
+  ( 3 GND_1 )
+ )
+ ( 4A894A49 PIN_ARRAY_20X2 P1 CONN_20X2
+  ( 1 Vcc_1 )
+  ( 2 GND_1 )
+  ( 3 ? )
+  ( 4 ? )
+  ( 5 ? )
+  ( 6 ? )
+  ( 7 ? )
+  ( 8 ? )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 ? )
+  ( 12 ? )
+  ( 13 ? )
+  ( 14 ? )
+  ( 15 BL_1 )
+  ( 16 ? )
+  ( 17 RS_1 )
+  ( 18 ? )
+  ( 19 R/W_1 )
+  ( 20 ? )
+  ( 21 E_1 )
+  ( 22 ? )
+  ( 23 N-000001 )
+  ( 24 ? )
+  ( 25 PB7_1 )
+  ( 26 ? )
+  ( 27 PB6_1 )
+  ( 28 ? )
+  ( 29 PB5_1 )
+  ( 30 ? )
+  ( 31 PB4_1 )
+  ( 32 ? )
+  ( 33 PB3_1 )
+  ( 34 ? )
+  ( 35 PB2_1 )
+  ( 36 ? )
+  ( 37 PB1_1 )
+  ( 38 ? )
+  ( 39 PB0_1 )
+  ( 40 ? )
+ )
+ ( 4A895018 R3 R1 470
+  ( 1 N-000028 )
+  ( 2 N-000027 )
+ )
+ ( 4A89501D R3 R2 3k3
+  ( 1 Vcc_1 )
+  ( 2 N-000028 )
+ )
+ ( 4A894AB1 R3 R3 1k
+  ( 1 N-000029 )
+  ( 2 Vcc_1 )
+ )
+ ( 4AD20FA4 RV2 RV1 1k
+  ( 1 ? )
+  ( 2 GND_1 )
+  ( 3 N-000027 )
+ )
+ ( 4A8B00AD conn_7x2 S1 LCD16x2_WH1602D
+  ( 1 Vcc_1 )
+  ( 2 GND_1 )
+  ( 3 N-000028 )
+  ( 4 RS_1 )
+  ( 5 R/W_1 )
+  ( 6 E_1 )
+  ( 7 PB0_1 )
+  ( 8 PB1_1 )
+  ( 9 PB2_1 )
+  ( 10 PB3_1 )
+  ( 11 PB4_1 )
+  ( 12 PB5_1 )
+  ( 13 PB6_1 )
+  ( 14 PB7_1 )
+  ( A BL_1 )
+  ( K GND_1 )
+ )
+)
+*
+{ Allowed footprints by component:
+$component R1
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R2
+ R?
+ SM0603
+ SM0805
+$endlist
+$component R3
+ R?
+ SM0603
+ SM0805
+$endlist
+$endfootprintlist
+}

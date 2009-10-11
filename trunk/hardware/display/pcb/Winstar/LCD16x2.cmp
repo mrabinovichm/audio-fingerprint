@@ -1,0 +1,59 @@
+Cmp-Mod V01 Created by Cvpcb (2007-11-29-a) date = 11/10/2009-19:05:11
+
+BeginCmp
+TimeStamp = 4A894B0E;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LEDV;
+EndCmp
+
+BeginCmp
+TimeStamp = 4A89A0B4;
+Reference = K1;
+ValeurCmp = CONN_3;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = 4A894A49;
+Reference = P1;
+ValeurCmp = CONN_20X2;
+IdModule  = PIN_ARRAY_20X2;
+EndCmp
+
+BeginCmp
+TimeStamp = 4A895018;
+Reference = R1;
+ValeurCmp = 470;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = 4A89501D;
+Reference = R2;
+ValeurCmp = 3k3;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = 4A894AB1;
+Reference = R3;
+ValeurCmp = 1k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = 4AD20FA4;
+Reference = RV1;
+ValeurCmp = 1k;
+IdModule  = RV2;
+EndCmp
+
+BeginCmp
+TimeStamp = 4A8B00AD;
+Reference = S1;
+ValeurCmp = LCD16x2_WH1602D;
+IdModule  = conn_7x2;
+EndCmp
+
+EndListe
