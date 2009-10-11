@@ -1,0 +1,25 @@
+EESchema (2007-11-29-a)  >> Creation date: 11/10/2009-18:40:28
+
+#Componentes ( orden = Referencia )
+| D1         LED         
+| K1         CONN_3      
+| P1         CONN_20X2   
+| R1         470         
+| R2         3k3         
+| R3         1k          
+| RV1        1k          
+| S1         LCD16x2_WH1602D
+#Fin Componentes
+
+#Componentes ( orden = Valor )
+| 1k           R3        
+| 1k           RV1       
+| 3k3          R2        
+| 470          R1        
+| CONN_20X2    P1        
+| CONN_3       K1        
+| LCD16x2_WH1602D S1        
+| LED          D1        
+#Fin Componentes
+
+#Fin de Lista
