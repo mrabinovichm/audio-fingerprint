@@ -17,6 +17,15 @@ funcprot(0);
 
 //**********************************************************************************************************
 
+//Cargamos el archivo wav con la señal de audio
+
+  [archivo] = input('Nombre del archivo .wav (enya/oasis/van halen): ', 'string');
+  [x, t, fs] = wav(archivo);
+
+//**********************************************************************************************************
+
+//**********************************************************************************************************
+
 //Definicion de parametros  
 
   L       = 3;                                 //3 segundos de señal para generar su huella
@@ -29,15 +38,11 @@ funcprot(0);
   
 //**********************************************************************************************************
 
-//Cargamos el archivo wav con la señal de audio
-  [archivo] = input('Nombre del archivo .wav (enya/oasis/van halen): ', 'string');
-  [x, t, fs] = wav(archivo);
-
 //Nos quedamos con tres segundos de señal que corresponden con el estribillo 
   inicio = 518175;                             //muestra donde inicia el estribillo
   x = x(inicio : inicio + L*fs);
   
-  resto = length(x) - S*floor(length(x)/S);    //ultimas muestras de x que no alcanzo para formar una trama 
+  resto = length(x) - S*floor(length(x)/S);    //ultimas muestras de x que no alcanzaron para formar una trama 
   ceros = zeros(1, W + Tau_max - S - resto);   //ceros de relleno para poder retardar Tau a Xj
   x = [x, ceros];
   
@@ -52,10 +57,10 @@ funcprot(0);
     
       ini_tramo = (j-1)*S + 1;
       fin_tramo = ini_tramo + W + Tau_max - 1;
-      xi = x(ini_tramo : fin_tramo);              //muestras de la señal en un tramo de 15ms
+      xt = x(ini_tramo : fin_tramo);              //muestras de la señal en un tramo de 15ms + Tau_max
      
-      d_norm = dif_norm(xi, W, Tau_max);
-      //f0(j) = yin(xi);                         
+      d_norm = dif_norm(xt, W, Tau_max);
+      //f0 = yin(d_norm);                         
   end
 length(x)
 ini_tramo
