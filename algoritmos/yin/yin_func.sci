@@ -32,15 +32,25 @@ endfunction
 //****** Funcion que haya la funcion diferencia normalizada de una señal que es pasada como parametro ******
 //**********************************************************************************************************
 
-function[d_norm] = dif_norm(xi, W, Tau_max);
+function[d_norm] = dif_norm(xi, S, W, Tau_max);
    
    d_norm(1) = 1;                                      //1er elemento vale 1, cuando Tau = 0, por definición
    suma = 0;
-    
-   for tau=2:Tau_max                                           //    W
-      d(tau) = sum( (xi(1 : W) - xi(tau : W + tau - 1)).^2 );  // sumatoria (Xj - Xj+tau)^2  
-      suma = suma + d(tau);                                    //  j = 1
-      d_norm(tau) = d(tau)/(suma/(tau-1));
+   for tau=2:floor(Tau_max/3)                                           
+      if tau <> 2 then 
+            daux = d3
+            d3 = sum( (xi(2*S+1 : W) - xi(tau+2*S+1 : W + tau)).^2 );    //diferencia en un intervalo de 5ms
+            d  = d - d1 + d3;
+            d1 = d2;
+            d2 = daux;            
+      else                              //la primera iteracion calcula la diferencia en un intervalo de 15ms
+            d1 = sum( (xi(1 : S) - xi(tau : S + tau - 1)).^2 ); 
+            d2 = sum( (xi(S+1 : 2*S) - xi(tau+S+1 : 2*S + tau)).^2 );
+            d3 = sum( (xi(2*S+1 : W) - xi(tau+2*S+1 : W + tau)).^2 );
+            d = d1 + d2 + d3;
+      end
+      suma = suma + d;                                    
+      d_norm(tau) = d/(suma/(tau-1));
    end
    
 endfunction  
