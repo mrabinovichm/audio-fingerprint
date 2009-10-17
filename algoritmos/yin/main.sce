@@ -54,22 +54,45 @@ funcprot(0);
 //en cada iteracion se halla los cruces por cero y la frecuencia fundamental f0
 //por cada periodo hay dos cruces por esto es que f0 = z/2
   d_norm = [];
-  for(j=1:q-3),
+  d_viejo = [];
+  
+  for j = 1:2
     
       ini_tramo = (j-1)*S + 1;
-      fin_tramo = ini_tramo + W + Tau_max - 1;
-      xt = x(ini_tramo : fin_tramo);              //muestras de la señal en un tramo de 15ms + Tau_max
-      d_norm = dif_norm(xt, S, W, Tau_max);
-      //d_norm = [d_norm; dif_norm(xt, S, W, Tau_max)];
-      f0(j) = yin(d_norm, fs);                         
+      fin_tramo = ini_tramo + 2*S - 1;
+      xt = x(ini_tramo : fin_tramo);
+      
+      d = dif_2(xt, S);
+      
+      d_masviejo = d_viejo;
+      d_viejo = d;
+  end
+  
+  for j = 3:q-3
+    
+      ini_tramo = (j-1)*S + 1;
+      fin_tramo = ini_tramo + 2*S - 1;
+      xt = x(ini_tramo : fin_tramo);
+      
+      d = dif_2(xt, S);
+      d_norm = dif_norm(d,d_viejo,d_masviejo);
+      
+      f0(j) = yin(d_norm, fs);
+      
+      d_masviejo = d_viejo;
+      d_viejo = d;
   end
 
-//d_norm=d_norm';
+
 //length(d_norm(1,:))
-//plot2d((1:length(d_norm(1,:))), d_norm(1,:))  
+plot2d((1:length(d_norm)), d_norm)  
+figure;
 
 //  subplot(2,2,2)
   plot2d((1:length(f0)), f0)
   xtitle('Huella de la Señal de audio','muestras','Frecuencia fundamental (Hz)');
+  
+  //figure;
+  //y = graf_fft(x, fs);
   
   

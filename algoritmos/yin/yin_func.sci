@@ -29,34 +29,40 @@ endfunction
 
 
 //**********************************************************************************************************
-//****** Funcion que haya la funcion diferencia normalizada de una señal que es pasada como parametro ******
+//****** Funcion que halla la funcion diferencia de una señal que es pasada como parametro *****************
 //**********************************************************************************************************
 
-function[d_norm] = dif_norm(xi, S, W, Tau_max);
+function[d] = dif_2(xi5, S);
    
-   d_norm(1) = 1;                                      //1er elemento vale 1, cuando Tau = 0, por definición
-   suma = 0;
-   for tau=2:floor(Tau_max/3)                                           
-      if tau <> 2 then 
-            daux = d3
-            d3 = sum( (xi(2*S+1 : W) - xi(tau+2*S+1 : W + tau)).^2 );    //diferencia en un intervalo de 5ms
-            d  = d - d1 + d3;
-            d1 = d2;
-            d2 = daux;            
-      else                              //la primera iteracion calcula la diferencia en un intervalo de 15ms
-            d1 = sum( (xi(1 : S) - xi(tau : S + tau - 1)).^2 ); 
-            d2 = sum( (xi(S+1 : 2*S) - xi(tau+S+1 : 2*S + tau)).^2 );
-            d3 = sum( (xi(2*S+1 : W) - xi(tau+2*S+1 : W + tau)).^2 );
-            d = d1 + d2 + d3;
-      end
-      suma = suma + d;                                    
-      d_norm(tau) = d/(suma/(tau-1));
+   inicio = 1;
+   final = S;
+   
+   //d(1) = 0;
+   
+   for tau = 1:S
+      d(tau) = sum((xi5(inicio:final)-xi5(inicio+tau:final+tau)).^2);
    end
-   
+      
 endfunction  
 
 //**********************************************************************************************************
 
+
+//**********************************************************************************************************
+//****** Funcion que halla la diferencia normalizada de la funcion diferencia ******************************
+//**********************************************************************************************************
+
+function [d_norm] = dif_norm(d,d_viejo,d_masviejo)
+  
+  d = [d_masviejo d_viejo d];
+  d_norm(1) = 1;
+  for tau = 2:length(d)
+      d_norm(tau) = d(tau)/(sum(d(2:tau))*(1/(tau-1)));
+  end
+      
+endfunction  
+
+//**********************************************************************************************************
 
 //**********************************************************************************************************
 //**************** Funcion que halla la frecuencia fundamental f0 en un tramo de señal *********************
@@ -64,8 +70,9 @@ endfunction
 
 function[f0] = yin(d_n, fs);
     
-   [min_a, ind] = min(d_n); 
-   umbral = min_a + min_a * 0.7 ;       //el umbral está un 10% por encima del minimo absoluto
+   [min_a, ind] = min(d_n);
+    
+   umbral = min_a +0.4;       
  
    minimos = [];
    lugar = [];
@@ -76,8 +83,22 @@ function[f0] = yin(d_n, fs);
       end
    end
 
-   [m ind] = min(minimos);              //me quedo con el menor de los minimos
-   f0 = fs/lugar(ind);
+   delta_l(1) = lugar(1);
+   
+   if length(lugar)>1 then
+      for i = 2:length(lugar)
+          delta_l(i) = lugar(i)-lugar(i-1);
+      end
+   end
+   
+   suma_delta = sum(delta_l(1:length(delta_l)));
+   promedio_delta = suma_delta/length(delta_l);
+   
+   //f0 = fs/promedio_delta;
+  
+  f0 = fs/delta_l(1);
+   //disp('f0',f0);
+   //disp('f01',f01);   
  
 endfunction  
 
@@ -88,7 +109,7 @@ endfunction
 //**************** Funcion que grafica una señal que es pasada como parámetro y su FFT**********************
 //**********************************************************************************************************
 
-function[y] = graf_fft(x, fs);
+function[y] = graf_fft(x, fs)
 
   N=size(x,'*');
   
@@ -97,7 +118,9 @@ function[y] = graf_fft(x, fs);
   //the fft response is symetric we retain only the first N/2 points
   f=fs*(0:(N/2))/N;        //associated frequency vector
   n=size(f,'*');
-
+  
+  t = (0:N-1)/fs;          //vector tiempo asociado a cada muestra
+  
 //Graficas de la señal normalizada vs tiempo y de la FFT
 
   subplot(2,2,1)
