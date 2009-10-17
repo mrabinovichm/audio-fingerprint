@@ -59,12 +59,26 @@ endfunction
 
 
 //**********************************************************************************************************
-//********** Funcion que haya la **************
+//**************** Funcion que halla la frecuencia fundamental f0 en un tramo de señal *********************
 //**********************************************************************************************************
 
-function[y] = yin(s);
+function[f0] = yin(d_n, fs);
     
-   
+   [min_a, ind] = min(d_n); 
+   umbral = min_a + min_a * 0.7 ;       //el umbral está un 10% por encima del minimo absoluto
+ 
+   minimos = [];
+   lugar = [];
+   for i=2:length(d_n)-1
+      if(d_n(i-1)>d_n(i)) & (d_n(i+1)>d_n(i)) & (umbral>d_n(i)) then
+            minimos = [minimos d_n(i)];
+            lugar   = [lugar i];        
+      end
+   end
+
+   [m ind] = min(minimos);              //me quedo con el menor de los minimos
+   f0 = fs/lugar(ind);
+ 
 endfunction  
 
 //**********************************************************************************************************
