@@ -61,7 +61,7 @@ funcprot(0);
       xt = x(ini_tramo : fin_tramo);              //muestras de la señal en un tramo de 15ms + Tau_max
       d_norm = dif_norm(xt, S, W, Tau_max);
       //d_norm = [d_norm; dif_norm(xt, S, W, Tau_max)];
-      //f0(j) = yin(d_norm);                         
+      f0(j) = yin(d_norm, fs);                         
   end
 
 //d_norm=d_norm';
@@ -69,7 +69,7 @@ funcprot(0);
 //plot2d((1:length(d_norm(1,:))), d_norm(1,:))  
 
 //  subplot(2,2,2)
-//  plot2d((1:length(f0)), f0)
-//  xtitle('Huella de la Señal de audio','muestras','Frecuencia fundamental (Hz)');
+  plot2d((1:length(f0)), f0)
+  xtitle('Huella de la Señal de audio','muestras','Frecuencia fundamental (Hz)');
   
   
