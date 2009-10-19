@@ -30,12 +30,19 @@ funcprot(0);
   [x, t, fs] = wav(archivo);
 
 //Nos quedamos con tres segundos de señal que corresponden con el estribillo 
-  inicio = 518175;                          //muestra donde inicia el estribillo
+  inicio = 518175;                               //muestra donde inicia el estribillo
   x = x(inicio : inicio + L*fs);
   t = t(inicio : inicio + L*fs);
   
+// Filtrado pasabanda entre 60 y 22000 Hz 
+  finf = 60;
+  fsup = 22000;
+  hz = iir(4,'bp','butt',[finf fsup]/fs,[0 0]); 
+  bp = syslin ('d', hz);                         //'d' indica el dominio discreto
+  xf = flts (x, bp);                             //xf es la señal filtrada
+
 //Cantidad de tramos de 15ms solapados, que es equivalente a la cantidad de muestras de f0
-  long = length(x);
+  long = length(xf);
   q = floor(long/(ti5 * fs));
 
 //Tomamos tramos de 15ms y en cada iteración nos desplazamos 5ms
@@ -45,7 +52,7 @@ funcprot(0);
     
       ini_tramo = (j*ti5)*fs;
       fin_tramo = (j*ti5+ti15)*fs;
-      xi = x(ini_tramo : fin_tramo);          //muestras de la señal en un tramo de 15ms
+      xi = xf(ini_tramo : fin_tramo);         //muestras de la señal en un tramo de 15ms
 //    ti = t(ini_tramo : fin_tramo);
    
       z(j) = zcr(xi);                         //cruces por cero en un tramo de 15ms 
@@ -58,7 +65,7 @@ funcprot(0);
 //  xtitle('Señal de audio','t(s)','amplitud');
   
 //  subplot(2,2,2)
-  plot2d((1:length(f0)), f0)
+  plot2d((1:length(f0)), f0, rect=[0,0,600,6000])
   xtitle('Huella de la Señal de audio','muestras','Frecuencia fundamental (Hz)');
   
   
