@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (2007-11-29-a) date = 11/10/2009-19:05:11
+Cmp-Mod V01 Created by Cvpcb (2007-11-29-a) date = 20/10/2009-23:15:24
 
 BeginCmp
 TimeStamp = 4A894B0E;
@@ -22,6 +22,13 @@ IdModule  = PIN_ARRAY_20X2;
 EndCmp
 
 BeginCmp
+TimeStamp = 4ADE41A7;
+Reference = Q1;
+ValeurCmp = NPN;
+IdModule  = TO92;
+EndCmp
+
+BeginCmp
 TimeStamp = 4A895018;
 Reference = R1;
 ValeurCmp = 470;
@@ -39,6 +46,27 @@ BeginCmp
 TimeStamp = 4A894AB1;
 Reference = R3;
 ValeurCmp = 1k;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ADE4225;
+Reference = R4;
+ValeurCmp = 10K;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ADE4200;
+Reference = R5;
+ValeurCmp = 10K;
+IdModule  = R3;
+EndCmp
+
+BeginCmp
+TimeStamp = 4ADE413F;
+Reference = R6;
+ValeurCmp = 390;
 IdModule  = R3;
 EndCmp
 
