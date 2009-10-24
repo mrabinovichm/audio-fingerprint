@@ -17,6 +17,7 @@ function[x, t, Fs] = wav(audio);
         case 'enya'      then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\enya.wav"),
         case 'oasis'     then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\oasis.wav"),
         case 'van halen' then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\van halen.wav"),
+        case 'seno'      then [x,Fs]=seno(1000,44100),
       else disp('No se ha encontrado el archivo de audio'),
   end 
 
@@ -73,3 +74,19 @@ function[y] = graf_fft(x, fs);
 endfunction  
 
 //**********************************************************************************************************
+//**********************************************************************************************************
+//**************** Funcion que hace un seno de frecuencia f de 3 segundos**********************
+//**********************************************************************************************************
+
+function[x,fs] = seno(f,fs);
+  
+  pi = %pi;
+  
+  inicio = 0;
+  fin = 30;
+  
+  t = [inicio:1/fs:fin];
+  
+  x = sin(2*pi*f*t);
+
+endfunction
