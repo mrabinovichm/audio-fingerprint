@@ -17,17 +17,23 @@ funcprot(0);
 
 //**********************************************************************************************************
 
+//Cargamos el archivo wav con la señal de audio
+  [archivo] = input('Nombre del archivo .wav (enya/oasis/van halen/seno): ', 'string');
+  [x, t, fs] = wav(archivo);
+
+
 //Definicion de parametros  
 
-  ti5  =  5*10^(-3);                          //intervalo de 5ms 
-  ti15 = 15*10^(-3);                          //intervalo de 15ms
-  L = 3;                                      //3 segundos de señal para generar su huella
+  ti5  = 5*10^(-3);                            //intervalo de 5ms 
+  ti15 = 15*10^(-3);                           //intervalo de 15ms
+  L = 3;                                       //3 segundos de señal para generar su huella
+  W       = floor(ti15 * fs);                  //cantidad de muestras de un tramo de 15ms
+  S       = floor(ti5 * fs);                   //cantidad de muestras de un tramo de 5ms
+  f0_min  = 1/ti15;                            //frecuencia fundamental min que puede detectarse en un tramo
+  Tau_max = floor((1/f0_min)*fs);              //retardo max tau para aplicar a la señal 
   
 //**********************************************************************************************************
 
-//Cargamos el archivo wav con la señal de audio
-  [archivo] = input('Nombre del archivo .wav (enya/oasis/van halen): ', 'string');
-  [x, t, fs] = wav(archivo);
 
 //Nos quedamos con tres segundos de señal que corresponden con el estribillo 
   inicio = 518175;                               //muestra donde inicia el estribillo
@@ -42,16 +48,15 @@ funcprot(0);
   xf = flts (x, bp);                             //xf es la señal filtrada
 
 //Cantidad de tramos de 15ms solapados, que es equivalente a la cantidad de muestras de f0
-  long = length(xf);
-  q = floor(long/(ti5 * fs));
+  q = floor((L - ti15)/ti5);
 
 //Tomamos tramos de 15ms y en cada iteración nos desplazamos 5ms
 //en cada iteracion se halla los cruces por cero y la frecuencia fundamental f0
 //por cada periodo hay dos cruces por esto es que f0 = z/2
-  for(j=1:q-3),
+  for(j=1:q),
     
-      ini_tramo = (j*ti5)*fs;
-      fin_tramo = (j*ti5+ti15)*fs;
+      ini_tramo = (j-1)*S + 1;
+      fin_tramo = ini_tramo + W - 1;
       xi = xf(ini_tramo : fin_tramo);         //muestras de la señal en un tramo de 15ms
 //    ti = t(ini_tramo : fin_tramo);
    

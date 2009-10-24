@@ -17,6 +17,7 @@ function[x, t, Fs] = wav(audio);
         case 'enya'      then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\enya.wav"),
         case 'oasis'     then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\oasis.wav"),
         case 'van halen' then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\van halen.wav"),
+        case 'seno'      then [x,Fs]=seno(1000,44100),
       else disp('No se ha encontrado el archivo de audio'),
   end 
 
@@ -32,15 +33,14 @@ endfunction
 //****** Funcion que halla la funcion diferencia de una señal que es pasada como parametro *****************
 //**********************************************************************************************************
 
-function[d] = dif_2(xi5, S);
+function[d] = dif_2(x, W);
    
    inicio = 1;
-   final = S;
+   final = W;
    
-   //d(1) = 0;
-   
-   for tau = 1:S
-      d(tau) = sum((xi5(inicio:final)-xi5(inicio+tau:final+tau)).^2);
+   d(1) = 0;
+   for tau = 2:W
+      d(tau) = sum((x(inicio:final)-x(inicio+tau-1:final+tau-1)).^2);
    end
       
 endfunction  
@@ -52,14 +52,24 @@ endfunction
 //****** Funcion que halla la diferencia normalizada de la funcion diferencia ******************************
 //**********************************************************************************************************
 
-function [d_norm] = dif_norm(d,d_viejo,d_masviejo)
+function [d_norm] = dif_norm(d);
   
-  d = [d_masviejo d_viejo d];
+  D = length(d);
+  
+//  d_norm(1) = 1;
+//  for tau = 2:D
+//      d_norm(tau) = d(tau)/(sum(d(2:tau))*(1/(tau-1)));
+//  end
+
+//Cálculo de la señal diferencia normalizada
+
+  sumd = 0;
   d_norm(1) = 1;
-  for tau = 2:length(d)
-      d_norm(tau) = d(tau)/(sum(d(2:tau))*(1/(tau-1)));
+  for i=2:D
+    sumd=sumd+d(i);
+    d_norm(i)=d(i)/((1/(i-1))*sumd);
   end
-      
+       
 endfunction  
 
 //**********************************************************************************************************
@@ -68,23 +78,28 @@ endfunction
 //**************** Funcion que halla la frecuencia fundamental f0 en un tramo de señal *********************
 //**********************************************************************************************************
 
-function[f0] = yin(d_n, fs);
+function[f0,umbral] = yin(d_n, fs);
     
    [min_a, ind] = min(d_n);
     
-   umbral = min_a +0.4;       
- 
+   umbral = min_a + 0.2;
+    
    minimos = [];
    lugar = [];
+   
    for i=2:length(d_n)-1
-      if(d_n(i-1)>d_n(i)) & (d_n(i+1)>d_n(i)) & (umbral>d_n(i)) then
+      if (umbral>d_n(i)) & (d_n(i-1)>d_n(i)) & (d_n(i+1)>d_n(i)) then
             minimos = [minimos d_n(i)];
             lugar   = [lugar i];        
       end
    end
 
+   if length(lugar) == 0 then
+      f0 = 0;
+      return;
+   end
+      
    delta_l(1) = lugar(1);
-   
    if length(lugar)>1 then
       for i = 2:length(lugar)
           delta_l(i) = lugar(i)-lugar(i-1);
@@ -94,12 +109,9 @@ function[f0] = yin(d_n, fs);
    suma_delta = sum(delta_l(1:length(delta_l)));
    promedio_delta = suma_delta/length(delta_l);
    
-   //f0 = fs/promedio_delta;
-  
-  f0 = fs/delta_l(1);
-   //disp('f0',f0);
-   //disp('f01',f01);   
- 
+   f0 = fs/promedio_delta;      //promedio de distancia entre minimos
+   //f0 = fs/delta_l(1);        //solo considerando el primer minimo
+    
 endfunction  
 
 //**********************************************************************************************************
@@ -109,7 +121,7 @@ endfunction
 //**************** Funcion que grafica una señal que es pasada como parámetro y su FFT**********************
 //**********************************************************************************************************
 
-function[y] = graf_fft(x, fs)
+function[y] = graf_fft(x, fs);
 
   N=size(x,'*');
   
@@ -134,3 +146,20 @@ function[y] = graf_fft(x, fs)
 endfunction  
 
 //**********************************************************************************************************
+
+//**********************************************************************************************************
+//**************** Funcion que hace un seno de frecuencia f de 3 segundos**********************
+//**********************************************************************************************************
+
+function[x,fs] = seno(f,fs);
+  
+  pi = %pi;
+  
+  inicio = 0;
+  fin = 30;
+  
+  t = [inicio:1/fs:fin];
+  
+  x = sin(2*pi*f*t);
+
+endfunction
