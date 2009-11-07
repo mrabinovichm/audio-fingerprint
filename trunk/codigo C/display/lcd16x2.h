@@ -2,13 +2,18 @@
 #define LCD16x2_H
 
 #include <reg56303.h>
+#include <string.h>
 
 #ifndef CPUCLK
 #define CPUCLK      67000000L   /* Hz */
 #endif
 
-#define CTRL 0x42
-#define DATO 0x62
+#define CTRL_WR 0x42 /*x10xx01x BL=1(backlight on), RS=0, R/W=0, E=1*/
+#define CTRL_RD 0x46 /*x10xx11x BL=1(backlight on), RS=0, R/W=1, E=1*/
+#define DATO_WR	0x62 /*x11xx01x BL=1(backlight on), RS=1, R/W=0, E=1*/
+#define DATO_RD	0x66 /*x11xx11x BL=1(backlight on), RS=1, R/W=1, E=1*/
+
+#define LCD_16 16	 /*Long de una linea del Dply*/ 
 
 typedef union 
 {
@@ -47,6 +52,7 @@ typedef union
 #define DPLY_OFF	  0x08 /*00001000 D=0 Dply off, C=0 sin cursor, B=0 sin blink*/
 #define CSOR_SHFT  	  0x18 /*00011000 */
 #define FUN_SET		  0x38 /*00111000 DL=1 8 bits, N=1 2_lineas, F=don't care*/
+#define SDA_LIN		  0xC0 /*11000000 Posiciona el cursor en la 2da linea*/
 
 
 /*Genera retardos multiplos de 100us*/
@@ -58,13 +64,19 @@ void init_gpio(void);
 /*Funcion que maneja la escritura en la memoria del lcd*/
 void write_lcd(char simbolo, char ctrl_dat);
 
+/*Lee un dato o el estado del Dply*/
+char read_lcd(char ctrl_dat);
+
 /*Inicializa el display LCD16x2*/
 void init_lcd(void);
 
-/*Envia un comando de configuracion al display*/
-void cmd_lcd(char comando);
+/*Se fija si el Dply esta ocupado*/
+/*int busy(void);*/
+
+/*Escribe una linea del Dply*/
+void wr_linea(char *data, int len_lin);
 
 /*Envia los datos que se escribiran en el display*/
-void dato_lcd(char *datos);
+void dato_lcd(char *dato, int len_dato);
 
 #endif /*LCD16x2_H*/
