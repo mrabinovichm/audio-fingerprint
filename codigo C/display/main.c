@@ -1,8 +1,8 @@
 #include "lcd16x2.h"
 
-const char busq[]     = "Buscando...";
-const char h_enc[]    = "Huella          encontrada:";
-const char h_no_enc[] = "Huella          no encontrada:";
+const char busq[]      = "Buscando...";
+const char h_enc[]     = "Huella          encontrada:";
+const char h_no_enc[]  = "Huella          no encontrada:";
 
 const char enya[]      = "Enya: Only Time";
 const char oasis[]     = "Oasis:          Headshrinker";
@@ -21,19 +21,23 @@ int main()
  	{                                    
  		for(i=0; i<len; i++)             
  		{                                
- 			write_lcd(busq[i], DATO_WR); 
+ 			write_lcd(busq[i], DATO_WR);
+ 			delay(1);  				    		/*esperar 100us*/ 
  		}                                
  	}                                    
  	else                                 
  	{                                    
  		for(i=0; i<LCD_16; i++)          
  		{                                
- 			write_lcd(busq[i], DATO_WR); 
+ 			write_lcd(busq[i], DATO_WR);
+ 			delay(1);  				    		/*esperar 100us*/ 
  		}                                
- 		write_lcd(SDA_LIN, CTRL_WR);     
+ 		write_lcd(SDA_LIN, CTRL_WR);
+ 		delay(1);  				    			/*esperar 100us*/     
  		for(i=LCD_16; i<len; i++)        
  		{                                
- 			write_lcd(busq[i], DATO_WR); 
+ 			write_lcd(busq[i], DATO_WR);
+ 			delay(1);  				    		/*esperar 100us*/ 
  		}                                
 }	                                 
 	 
