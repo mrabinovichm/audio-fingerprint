@@ -55,9 +55,6 @@ typedef union
 #define SDA_LIN		  0xC0 /*11000000 Posiciona el cursor en la 2da linea*/
 
 
-/*Genera retardos multiplos de 100us*/
-void delay(int factor);
-
 /*Inicializa el puerto B en modo GPIO*/
 void init_gpio(void);
 
@@ -67,11 +64,14 @@ void write_lcd(char simbolo, char ctrl_dat);
 /*Lee un dato o el estado del Dply*/
 char read_lcd(char ctrl_dat);
 
+/*Genera retardos multiplos de 100us*/
+void delay(int factor);
+
 /*Inicializa el display LCD16x2*/
 void init_lcd(void);
 
 /*Se fija si el Dply esta ocupado*/
-/*int busy(void);*/
+int busy(void);
 
 /*Escribe una linea del Dply*/
 void wr_linea(char *data, int len_lin);

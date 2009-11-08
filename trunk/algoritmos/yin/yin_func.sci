@@ -40,7 +40,7 @@ function[d] = dif_2(x, W);
    
    d(1) = 0;
    for tau = 2:W
-      d(tau) = sum((x(inicio:final)-x(inicio+tau-1:final+tau-1)).^2);
+      d(tau) = abs(sum((x(inicio:final)-x(inicio+tau-1:final+tau-1))));
    end
       
 endfunction  
