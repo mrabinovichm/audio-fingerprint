@@ -18,6 +18,7 @@ function[x, t, Fs] = wav(audio);
         case 'oasis'     then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\oasis.wav"),
         case 'van halen' then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\van halen.wav"),
         case 'seno'      then [x,Fs]=seno(1000,44100),
+        case 'ruido'     then [x,Fs]=seno(1000,44100) + seno(12000,44100),
       else disp('No se ha encontrado el archivo de audio'),
   end 
 

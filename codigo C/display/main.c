@@ -10,6 +10,34 @@ const char van_halen[] = "Van Halen:      Erupsion";
 
 int main()
 {
- for(;;){}
+	int i, len;
+	
+	init_gpio();	
+	init_lcd();
+
+
+ 	len = strlen(busq);                  
+ 	if(len <= LCD_16)                    
+ 	{                                    
+ 		for(i=0; i<len; i++)             
+ 		{                                
+ 			write_lcd(busq[i], DATO_WR); 
+ 		}                                
+ 	}                                    
+ 	else                                 
+ 	{                                    
+ 		for(i=0; i<LCD_16; i++)          
+ 		{                                
+ 			write_lcd(busq[i], DATO_WR); 
+ 		}                                
+ 		write_lcd(SDA_LIN, CTRL_WR);     
+ 		for(i=LCD_16; i<len; i++)        
+ 		{                                
+ 			write_lcd(busq[i], DATO_WR); 
+ 		}                                
+}	                                 
+	 
+	delay(50000);
+	HDR = 0x0200;
 
 }
