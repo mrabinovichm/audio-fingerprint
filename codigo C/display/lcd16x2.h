@@ -8,10 +8,19 @@
 #define CPUCLK      67000000L   /* Hz */
 #endif
 
-#define CTRL_WR 0x42 /*x10xx01x BL=1(backlight on), RS=0, R/W=0, E=1*/
-#define CTRL_RD 0x46 /*x10xx11x BL=1(backlight on), RS=0, R/W=1, E=1*/
-#define DATO_WR	0x62 /*x11xx01x BL=1(backlight on), RS=1, R/W=0, E=1*/
-#define DATO_RD	0x66 /*x11xx11x BL=1(backlight on), RS=1, R/W=1, E=1*/
+#define CTRL_WR 0x4200 /*x10xx01x BL=1(backlight on), RS=0, R/W=0, E=1*/
+#define CTRL_RD 0x4600 /*x10xx11x BL=1(backlight on), RS=0, R/W=1, E=1*/
+#define DATO_WR	0x6200 /*x11xx01x BL=1(backlight on), RS=1, R/W=0, E=1*/
+#define DATO_RD	0x6600 /*x11xx11x BL=1(backlight on), RS=1, R/W=1, E=1*/
+
+#define CLEAR	      0x01 /*00000001 Borra Dply y vuelve cursor al inicio*/
+#define RET_HOME      0x02 /*00000010 Contador de direcciones a cero*/
+#define ETY_MOD_SET	  0x06 /*00000110 I/D=1 inc DDRAM, S=0 sin salto de Dply*/
+#define DPLY_ON		  0x0C /*00001100 D=1 Dply on, C=0 sin cursor, B=0 sin blink*/
+#define DPLY_OFF	  0x08 /*00001000 D=0 Dply off, C=0 sin cursor, B=0 sin blink*/
+#define CSOR_SHFT  	  0x18 /*00011000 */
+#define FUN_SET		  0x38 /*00111000 DL=1 8 bits, N=1 2_lineas, F=don't care*/
+#define SDA_LIN		  0xC0 /*11000000 Posiciona el cursor en la 2da linea*/
 
 #define LCD_16 16	 /*Long de una linea del Dply*/ 
 
@@ -45,24 +54,15 @@ typedef union
 
 } REGISTRO_HDR;
 
-#define CLEAR	      0x01 /*00000001 Borra Dply y vuelve cursor al inicio*/
-#define RET_HOME      0x02 /*00000010 Contador de direcciones a cero*/
-#define ETY_MOD_SET	  0x06 /*00000110 I/D=1 inc DDRAM, S=0 sin salto de Dply*/
-#define DPLY_ON		  0x0C /*00001100 D=1 Dply on, C=0 sin cursor, B=0 sin blink*/
-#define DPLY_OFF	  0x08 /*00001000 D=0 Dply off, C=0 sin cursor, B=0 sin blink*/
-#define CSOR_SHFT  	  0x18 /*00011000 */
-#define FUN_SET		  0x38 /*00111000 DL=1 8 bits, N=1 2_lineas, F=don't care*/
-#define SDA_LIN		  0xC0 /*11000000 Posiciona el cursor en la 2da linea*/
-
 
 /*Inicializa el puerto B en modo GPIO*/
 void init_gpio(void);
 
 /*Funcion que maneja la escritura en la memoria del lcd*/
-void write_lcd(char simbolo, char ctrl_dat);
+void write_lcd(unsigned char simbolo, short ctrl_dat);
 
 /*Lee un dato o el estado del Dply*/
-char read_lcd(char ctrl_dat);
+//char read_lcd(char ctrl_dat);
 
 /*Genera retardos multiplos de 100us*/
 void delay(int factor);
@@ -71,12 +71,12 @@ void delay(int factor);
 void init_lcd(void);
 
 /*Se fija si el Dply esta ocupado*/
-int busy(void);
+//int busy(void);
 
 /*Escribe una linea del Dply*/
-void wr_linea(char *data, int len_lin);
+//void wr_linea(char *data, int len_lin);
 
 /*Envia los datos que se escribiran en el display*/
-void dato_lcd(char *dato, int len_dato);
+//void dato_lcd(char *dato, int len_dato);
 
 #endif /*LCD16x2_H*/
