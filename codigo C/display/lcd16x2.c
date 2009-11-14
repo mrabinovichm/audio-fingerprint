@@ -1,7 +1,5 @@
 #include "lcd16x2.h"
 
-//REGISTRO_HDR dato;
-
 
 /*Inicializa el puerto B en modo GPIO*/
 void init_gpio(void)
@@ -102,31 +100,35 @@ void init_lcd(void)
 // 			return bf;                                                                                              
 // 		}	                                                                                                        
 //}                                                                                                                    
-                                                                                                                      
-                                                                                                                      
-/*Escribe una linea del Dply*/                                                                                       
-//void wr_linea(char *data, int len_lin)                                                                               
-//{                                                                                                                    
-// 	int i;                                                                                                              
-// 	for(i=0; i<len_lin; i++)                                                                                            
-// 	{                                                                                                                   
- 		/*falta verificar ocupado*/                                                                                     
-// 		write_lcd(*(data+i), DATO_WR);                                                                                  
-// 	}                                                                                                                   
-//}                                                                                                                    
+                                                                                                                   
+                                                                                                                    
                                                                                                                       
 /*Envia los datos que se escribiran en el display*/                                                                  
-//void dato_lcd(char *dato, int len_dato)                                                                              
-//{                                                                                                                    
-//	if(len_dato <= LCD_16)                                                                                              
-//		{                                                                                                               
-// 			wr_linea(dato, len_dato);   /*escribe solo una linea*/                                                      
-// 		}                                                                                                               
-// 	else                                                                                                                
-// 		{								/*escribe las dos lineas*/                                                      
-// 			wr_linea(dato, LCD_16);                                                                                     
-			/*busy*/                                                                                                    
-// 			write_lcd(SDA_LIN, CTRL_WR);                                                                                
-// 			wr_linea(dato, (len_dato - LCD_16));                                                                        
-// 		}                                                                                                            
-//}                                                                                                                    
+void dato_lcd(unsigned char *dato, short len)
+{
+	short i;
+
+	if(len <= LCD_16)                                                  
+  	{                                                                  
+  		for(i=0; i<len; i++)                                           
+  		{                                                              
+  			write_lcd(dato[i], DATO_WR);                               
+  			delay(1);  				    		/*esperar 100us*/      
+  		}                                                              
+  	}                                                                  
+  	else                                                               
+  	{                                                                  
+  		for(i=0; i<LCD_16; i++)                                        
+  		{                                                              
+ 			write_lcd(dato[i], DATO_WR);                               
+  			delay(1);  				    		/*esperar 100us*/      
+  		}                                                              
+  		write_lcd(SDA_LIN, CTRL_WR);                                   
+  		delay(1);  				    			/*esperar 100us*/      
+ 		for(i=LCD_16; i<len; i++)                                      
+  		{                                                              
+ 			write_lcd(dato[i], DATO_WR);                               
+ 			delay(1);  				    		/*esperar 100us*/      
+  		}                                                              
+	}
+}

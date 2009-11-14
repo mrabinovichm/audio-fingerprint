@@ -1,45 +1,41 @@
 #include "lcd16x2.h"
 
-const unsigned char dsp_afp[]   = "DSP 2009        AUDIOFINGERPRINT";
+unsigned char dsp_afp[]   = "DSP 2009        AUDIOFINGERPRINT";
 
-const unsigned char busq[]      = "Buscando...";
-const unsigned char h_enc[]     = "Huella          encontrada:";
-const unsigned char h_no_enc[]  = "Huella          no encontrada:";
+unsigned char busq[]      = "Buscando...";
+unsigned char h_enc[]     = "Huella          encontrada";
+unsigned char h_no_enc[]  = "Huella          no encontrada";
 
-const unsigned char enya[]      = "Enya: Only Time";
-const unsigned char oasis[]     = "Oasis:          Headshrinker";
-const unsigned char van_halen[] = "Van Halen:      Erupsion";
+unsigned char enya[]      = "Enya: Only Time";
+unsigned char oasis[]     = "Oasis:          Headshrinker";
+unsigned char van_halen[] = "Van Halen:      Erupsion";
 
+void dato_lcd(unsigned char *dato, short len_dato);
 
 int main()
 {
-	int i, len;
-	
+	short len;
+
 	init_gpio();	
 	init_lcd();
 
-  	len = strlen(dsp_afp);                                                
- 	if(len <= LCD_16)                                                  
-  	{                                                                  
-  		for(i=0; i<len; i++)                                           
-  		{                                                              
-  			write_lcd(dsp_afp[i], DATO_WR);                               
-  			delay(1);  				    		/*esperar 100us*/      
-  		}                                                              
-  	}                                                                  
-  	else                                                               
-  	{                                                                  
-  		for(i=0; i<LCD_16; i++)                                        
-  		{                                                              
- 			write_lcd(dsp_afp[i], DATO_WR);                               
-  			delay(1);  				    		/*esperar 100us*/      
-  		}                                                              
-  		write_lcd(SDA_LIN, CTRL_WR);                                   
-  		delay(1);  				    			/*esperar 100us*/      
- 		for(i=LCD_16; i<len; i++)                                      
-  		{                                                              
- 			write_lcd(dsp_afp[i], DATO_WR);                               
- 			delay(1);  				    		/*esperar 100us*/      
-  		}                                                              
-	}	                                                                   
-}
+  	len = strlen((char *)dsp_afp);
+	dato_lcd(dsp_afp, len);
+	delay(10000);
+	write_lcd(CLEAR, CTRL_WR);	    	/*comando Clear Dply*/
+	delay(100);  				    	/*esperar 10ms*/
+  	len = strlen((char *)enya);
+	dato_lcd(enya, len);
+	delay(10000);
+	write_lcd(CLEAR, CTRL_WR);	    	/*comando Clear Dply*/
+	delay(100);  				    	/*esperar 10ms*/
+  	len = strlen((char *)h_no_enc); 		                   
+	dato_lcd(h_no_enc, len);
+	delay(10000);
+	write_lcd(CLEAR, CTRL_WR);	    	/*comando Clear Dply*/
+	delay(100);  				    	/*esperar 10ms*/
+  	len = strlen((char *)busq); 		                   
+	dato_lcd(busq, len);
+
+}/*Fin main*/
+
