@@ -6,7 +6,8 @@
 
 
 //**********************************************************************************************************
-//********************* Obtención de la señal a partir de un archivo .WAV *************************
+//********************* Obtención de la señal a partir de un archivo .WAV **********************************
+//**********************************************************************************************************
 //**********************************************************************************************************
 
 function[x, t, Fs] = wav(audio);
@@ -14,11 +15,11 @@ function[x, t, Fs] = wav(audio);
   stacksize('max');
 
   select audio,    
-        case 'enya'      then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\enya.wav"),
-        case 'oasis'     then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\oasis.wav"),
-        case 'van halen' then [x,Fs]=wavread("E:\facultad\dsp\Proyecto\audio-fingerprint\audio\van halen.wav"),
-        case 'seno'      then [x,Fs]=seno(1000,44100),
-        case 'ruido'     then [x,Fs]=seno(1000,44100) + seno(12000,44100),
+        case 'enya'      then [x,Fs] = wavread("enya.wav"),
+        case 'oasis'     then [x,Fs] = wavread("oasis.wav"),
+        case 'van halen' then [x,Fs] = wavread("van halen.wav"),
+        case 'seno'      then [x,Fs] = seno(1000,44100),
+        case 'ruido'     then [x,Fs] = seno(1000,44100) + seno(12000,44100),
       else disp('No se ha encontrado el archivo de audio'),
   end 
 
@@ -33,6 +34,7 @@ endfunction
 //**********************************************************************************************************
 //********** Funcion que haya los cruces por cero de una señal que es pasada como parametro ****************
 //**********************************************************************************************************
+//**********************************************************************************************************
 
 function[z] = zcr(s);
     
@@ -43,7 +45,98 @@ function[z] = zcr(s);
             z = z + 1;
         end
     end 
+
 endfunction  
+
+//**********************************************************************************************************
+
+
+//**********************************************************************************************************
+//**************** Funcion que realiza la correlacion entre dos vectores de muestras************************
+//**************x tiene menos de la mitad de muestras que y (ver condiciones de borde)**********************
+//**********************************************************************************************************
+//**********************************************************************************************************
+
+function [r] = correlacion(x,y);
+  
+x = x - mean(x);
+y = y - mean(y);
+
+nx = length(x);
+ny = length(y);
+r = [];
+
+for l=1:ny-2*nx
+  for m=0:nx-1
+    sumax   = 0;
+    sumay   = 0;
+    sigmax  = 0;
+    sigmay  = 0;
+    suma    = 0;
+    for k=1:nx
+      yk = y(l:l+2*nx-1);
+      suma = suma + (x(k)*yk(m+k));
+      //*********************
+      sumax = sumax + (x(k)*x(k));
+      sumay = sumay + (yk(k)*yk(k));
+    end
+    //*********************
+    sigmax = sqrt(sumax/nx);
+    sigmay = sqrt(sumay/nx);
+    //*********************
+    div = sigmax*sigmay*nx;
+    r(l+m) = suma/div;
+  end
+end
+
+endfunction
+
+//**********************************************************************************************************
+
+
+//**********************************************************************************************************
+//**Funcion que genera un archivo de texto con los datos del array entre corchetes y separados por comas****
+//**********************************************************************************************************
+//**********************************************************************************************************
+
+function [] = imp_array(arreglo);
+  
+
+fd = mopen("arreglo.txt", "w");
+
+mfprintf(fd,'{');
+
+mfprintf(fd,'%f', arreglo(1));
+
+for i=2:length(arreglo)
+  mfprintf(fd,',%f', arreglo(i));
+end
+
+mfprintf(fd,'}');
+   							   
+mclose(fd);
+
+endfunction
+
+//**********************************************************************************************************
+
+
+//**********************************************************************************************************
+//**************** Funcion que hace un seno de frecuencia f de 30 segundos**********************************
+//**********************************************************************************************************
+
+function[x,fs] = seno(f,fs);
+  
+  pi = %pi;
+  
+  inicio = 0;
+  fin = 30;
+  
+  t = [inicio:1/fs:fin];
+  
+  x = sin(2*pi*f*t);
+
+endfunction
 
 //**********************************************************************************************************
 
@@ -72,22 +165,6 @@ function[y] = graf_fft(x, fs);
   plot2d(f,abs(y(1:n)))
   xtitle('Transformada rápida de Fourier (FFT)','f(Hz)');
 
-endfunction  
-
-//**********************************************************************************************************
-//**********************************************************************************************************
-//**************** Funcion que hace un seno de frecuencia f de 3 segundos**********************
-//**********************************************************************************************************
-
-function[x,fs] = seno(f,fs);
-  
-  pi = %pi;
-  
-  inicio = 0;
-  fin = 30;
-  
-  t = [inicio:1/fs:fin];
-  
-  x = sin(2*pi*f*t);
-
 endfunction
+
+//**********************************************************************************************************

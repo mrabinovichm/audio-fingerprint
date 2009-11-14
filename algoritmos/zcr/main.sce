@@ -10,7 +10,7 @@ clc;                        //limpia la pantalla
 clf(0)                      //cierra las gráficas abiertas
 
 //Obtiene las funciones definidas en el archivo de funciones .sci
-getf ('E:\facultad\dsp\Proyecto\audio-fingerprint\algoritmos\zcr\zcr_func.sci')
+getf ('zcr_func.sci')
 
 //Oculta mensaje de funcion definida dos veces
 funcprot(0);                          
@@ -35,27 +35,28 @@ funcprot(0);
 
 //Nos quedamos con tres segundos de señal que corresponden con el estribillo 
   
-  inicio = 518175;                            //muestra donde inicia el estribillo
+  inicio = 518175;                            //muestra donde inicia el estribillo (enya en este caso)
   x = x(inicio : inicio + L*fs);
   t = t(inicio : inicio + L*fs);
   
 
 // Filtrado pasabanda entre 60 y 22000 Hz 
-  finf = 60;
-  fsup = 22000;
-  hz = iir(4,'bp','butt',[finf fsup]/fs,[0 0]); 
-  bp = syslin ('d', hz);                          //'d' indica el dominio discreto
-  xf = flts (x, bp);                              //xf es la señal filtrada
+  finf  = 60;
+  fsup  = 22000;
+  hz    = iir(4,'bp','butt',[finf fsup]/fs,[0 0]); 
+  bp    = syslin ('d', hz);                          //'d' indica el dominio discreto
+  xf    = flts (x, bp);                              //xf es la señal filtrada
 
 
 //Cantidad de tramos de 15ms solapados, que es equivalente a la cantidad de muestras de f0
   q = floor((L - tr_g)/tr_c);
 
 
-//Tomamos tramos de 15ms y en cada iteración nos desplazamos 5ms
-//en cada iteracion se halla los cruces por cero y la frecuencia fundamental f0
+//Tomamos tramos de tr_g (15 ms) y en cada iteración nos desplazamos tr_c(5ms)
+//en cada iteracion se hallan los cruces por cero y la frecuencia fundamental f0
 //por cada periodo hay dos cruces por esto es que f0 = z/2
-//La primera vez se calcula sobre los tr_g ms, luego se recuerdan los datos ya procesados 
+//La primera vez se calcula sobre los tr_g ms, luego se recuerdan los datos ya procesados
+//por lo que bastan con procesar tr_c ms cada vez
   
   f_cero = [];
   
@@ -81,21 +82,35 @@ funcprot(0);
       ini_tramo = (j+1)*S;
       fin_tramo = ini_tramo + S;
       xi = xf(ini_tramo : fin_tramo);         //muestras de la señal en un tramo de 15ms
-//    ti = t(ini_tramo : fin_tramo);
    
       z(j) = zcr(xi);                         //cruces por cero en un tramo de 15ms 
            
-      f3 = z(j)/2 * (1/tr_c);              //frecuencia fundamental f0 para dicho tramo  
+      f3 = z(j)/2 * (1/tr_c);                 //frecuencia fundamental f0 para dicho tramo 
+                                              //(se multiplica por 1/tr_c para que f0 esté en Hz) 
       
-      f0(j) = (f1+f2+f3)/3;                                        //se multiplica por 1/ti15 para que f0 esté en Hz
+      f0(j) = (f1+f2+f3)/3;                   //f0 en un tramo de tr_g ms                   
   end
 
-//  subplot(2,2,1)
-//  plot2d(ti, xi(1,:))
-//  xtitle('Señal de audio','t(s)','amplitud');
+  //se genera un archivo de texto con los valoras de f0
+  imp_array(f0);
   
-//  subplot(2,2,2)
+  figure;
   plot2d((1:length(f0)), f0, rect=[0,0,600,6000])
   xtitle('Huella de la Señal de audio','muestras','Frecuencia fundamental (Hz)');
   
-  //disp(f0);
+  
+  //procesamiento (simulacion)
+  //la huella hallada anteriormente es la que está en memoria 
+  //"huella_calc" es la huella obtenida para comparar con la de la memoria 
+  
+  huella_calc = f0(123:323); //se toman 200 muestras (obtenido tras simular)
+  
+  
+  //calculo de correlacion
+  r = correlacion(huella_calc,f0);
+  
+  
+  figure;
+  plot2d(abs(r))
+  xtitle('Correlacion entre señal entrada y guardada en memoria','muestras','correlacion normalizada');
+  max(abs(r))
