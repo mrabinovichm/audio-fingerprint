@@ -14,8 +14,8 @@
 **
 **************************************************************************/
 
-#include <c56.h>
-#include <reg56303.h>
+//#include <c56.h>
+//#include <reg56303.h>
 
 #include "cs4215.h"
 #include "loopback.h"
@@ -54,8 +54,6 @@ _Y _circ _fract *txdata_p = txdata.b;
 _Y _circ _fract *rxdata_p = rxdata.b;
 _X int dec_count;
 
-_circ _fract buffer_in[LARGO];
-_circ _fract buffer_in2[LARGO];
 _circ _fract *ptr_buffer;
 
 /*------------------------------------------------------------------------------
@@ -91,7 +89,7 @@ ssi_receive_err(void)
 static void _near _internal _reentrant _long_interrupt(IRQ_ESSI0_RCL)
 ssi_receive_ls(void)
 {
-    //rxdata_p = rxdata.b;
+//    rxdata_p = rxdata.b;
 	*ptr_buffer++ = rxdata.d.i.audio_left;
 }
 
