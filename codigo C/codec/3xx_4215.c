@@ -52,9 +52,8 @@
 _Y _circ CS4215DATA txdata, rxdata;
 _Y _circ _fract *txdata_p = txdata.b;
 _Y _circ _fract *rxdata_p = rxdata.b;
-_X int dec_count;
 
-_circ _fract *ptr_buffer;
+_fract *ptr_buffer;
 
 /*------------------------------------------------------------------------------
  *  PURPOSE: Handle SSI receive (A/D converter) interrupt.
