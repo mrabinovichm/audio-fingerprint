@@ -12,7 +12,7 @@ int main()
 
 	unsigned char enya[]      = "Enya: Only Time";
 	unsigned char oasis[]     = "Oasis:          Headshrinker";
-	unsigned char van_halen[] = "Van Halen:      Erupsion";
+	unsigned char van_halen[] = "Van Halen:      Eruption";
 
 	short len;
 
