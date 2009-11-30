@@ -8,10 +8,11 @@
 
 int signo(_fract x)
 {
-	if (x == 0)
-		return 0;
+	_fract cero = 0;
 
-	return (x/fabs(x));
+	if (x > cero) return 1;
+	if (x < cero) return -1;
+	if (x == cero) return 0;
 }
 //**********************************************************************************************************
 
