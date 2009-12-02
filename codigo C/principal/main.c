@@ -4,18 +4,20 @@
 #include "zcr_func.h"
 #include "int.h"
 
+#define LARGO 32
 
-/* ********************** Mensajes a desplegar en display *************************** */
-	unsigned char dsp_afp[]   = "    DSP 2009    AUDIOFINGERPRINT";
-	unsigned char sw_2[]      = "  Presione SW2   para  comenzar ";
-    unsigned char busq[]      = "Buscando...";
-    unsigned char h_enc[]     = "Huella          encontrada";
-	unsigned char h_no_enc[]  = "Huella          no encontrada";
-	unsigned char error[]     = "Error";
 
-	unsigned char enya[]      = "Enya: Only Time";
-	unsigned char oasis[]     = "Oasis:          Headshrinker";
-	unsigned char van_halen[] = "Van Halen:      Eruption";
+/* ***************** Mensajes a desplegar y sus largos en display ********************** */
+	 _Y unsigned char dsp_afp[]   = "DSP 2009        AUDIOFINGERPRINT";
+	 _Y unsigned char sw_2[]      = "Presione SW2    para  comenzar  ";
+	 _Y unsigned char busq[]      = "Buscando        huella...       ";
+     _Y unsigned char h_enc[]     = "Huella          encontrada      ";
+	 _Y unsigned char h_no_enc[]  = "Huella          no encontrada   ";
+ 	 _Y unsigned char error[]     = "Error                           ";
+ 
+ 	 _Y unsigned char enya[]      = "Enya:           Only Time       ";
+	 _Y unsigned char oasis[]     = "Oasis:          Headshrinker    ";
+	 _Y unsigned char van_halen[] = "Van Halen:      Eruption        ";
 /* ********************************************************************************** */
 
 /* ********** Buffers y punteros para los datos de entrada desde el codec *********** */
@@ -26,55 +28,59 @@
 	extern _fract *ptr_buffer;
 	_fract *ptr_fin;
 	_fract *ptr_ini;
+	
 /* ********************************************************************************** */
 
 /* ***************** Buffers y punteros para el manejo de huellas ******************* */
-	float huella[q];		   /*muestras de frecuencias fundamentales*/
-	int ceros_tramo[T];		   /*cantidad de ceros en c/tramo de 5ms*/
-	short tramo_listo;		   /*flag que indica tramo lleno*/
-	unsigned char *ptr_resp;   /*nombre de cancion a enviar al display*/
+	float huella[q];		   				   /*muestras de frecuencias fundamentales*/
+	int ceros_tramo[T];		   					 /*cantidad de ceros en c/tramo de 5ms*/
+	short tramo_listo;		   							 /*flag que indica tramo lleno*/
+	_Y unsigned char *ptr_resp;   			   /*nombre de cancion a enviar al display*/
+	extern float *ptr_huella;
+	extern float *ptr_h_fin;
 /* ********************************************************************************** */
 
+extern short sw2;
 	
 int main(void)
 {
 	short resultado;							   /*0 = no encontrada, 1 = encontrada*/
-	short len;										  /*largo de datos mandados al lcd*/
 	short uso_buff;									  /*indica numero de buffer en uso*/
 	short h_lista ; 						/*indica que la huella generada está lista*/
-	sw2 = 0;											
-	
+			
 /* ************** Inicializa puerto, display, switch2, interrupciones  ************** */
-	init_gpio();	
-	init_lcd();
-	init_sw();
-	ssi_init(); 				  									/*inicializa codec*/
-	disable_interrupts();
+	init_gpio();						   /*inicializa puerto donde se conecta el lcd*/	
+	init_lcd();								  /*inicializa el display, ver HD44780.pdf*/
+	init_sw();										   /*inicializa switch 2 y led D12*/
+  	ssi_init(); 				  									/*inicializa codec*/
 
     
-  	len = strlen((char *)dsp_afp);							   /*mensaje de bienvenida*/
-	dato_lcd(dsp_afp, len);
-	delay(50000);														  /*esperar 5s*/
+	/*mensaje de bienvenida*/
+disable_interrupts();
+	dato_lcd(dsp_afp, LARGO);
+	delay(5000);														  /*esperar 0.5s*/
 	write_lcd(CLEAR, CTRL_WR);	    							  /*comando Clear Dply*/
 	delay(100);  				    									/*esperar 10ms*/
 	
 	for(;;) 
 	{
+		sw2 = 0;
 		resultado = 0;
 		uso_buff = 0;
 		h_lista = 0;
 		ptr_huella = huella;				 /*inicio el puntero al arreglo de frec f0*/
 		ptr_h_fin = ptr_huella + q;
 		
-		len = strlen((char *)sw_2);
-		dato_lcd(sw_2, len);
-		delay(100);
+		dato_lcd(sw_2, LARGO);
+		delay(1000);
+		enable_interrupts();
 		while(!sw2);									   /*sw2=1 arranca la busqueda*/
-		sw2 = 0;
+	 
+disable_interrupts();
 		write_lcd(CLEAR, CTRL_WR);	    						  /*comando Clear Dply*/
 		delay(100);  				    								/*esperar 10ms*/
-		len = strlen((char *)busq); 		                   
-		dato_lcd(busq, len);
+		dato_lcd(busq, LARGO);
+enable_interrupts();
 
 /* *************************************************************************************
 Calculo los ceros en 2 tramos de 5ms y luego el tercero dentro del loop
@@ -85,7 +91,7 @@ la funcion fundamentales() calcula la frecuencia fundamental de 3 tramos de
 		ptr_buffer = buffer_in0;						  /*inicializo puntero buffer0*/
 		ptr_fin = ptr_buffer + S;
 		ptr_ini = buffer_in0;
-		enable_interrupts();
+		
 		while(ptr_buffer < ptr_fin);				   /*espero hasta llenar el buffer*/
 		ptr_buffer = buffer_in1;						  /*inicializo puntero buffer1*/
 		ptr_fin = ptr_buffer + S;
@@ -121,25 +127,24 @@ la funcion fundamentales() calcula la frecuencia fundamental de 3 tramos de
 		disable_interrupts();
 		resultado = busqueda(huella);					  /*busca la huella en la base*/
 	
+		write_lcd(CLEAR, CTRL_WR);	    						  /*comando Clear Dply*/
+		delay(100);
 		switch(resultado)
 		{
-			case 0 : len = strlen((char *)h_no_enc); 		                   
-					 dato_lcd(h_no_enc, len);
+			case 0 : dato_lcd(h_no_enc, LARGO);
 					 break;
-			case 1 : len = strlen((char *)h_enc); 		                   
-					 dato_lcd(h_enc, len);
+			case 1 : dato_lcd(h_enc, LARGO);
 					 delay(20000);
 					 write_lcd(CLEAR, CTRL_WR);	    			  /*comando Clear Dply*/
-					 delay(100);  				    					/*esperar 10ms*/
-					 len = 32; //strlen((char *) ----); 		                   
-					 dato_lcd(ptr_resp, len);
+					 delay(100);  				    					/*esperar 10ms*/       
+					 dato_lcd(ptr_resp, LARGO);
 					 break;
-			default: len = strlen((char *)error); 		                   
-					 dato_lcd(error, len);
+			default: dato_lcd(error, LARGO);
 					 break;
 		}												   	
-		delay(50000);
+		delay(5000);
 		write_lcd(CLEAR, CTRL_WR);	    						  /*comando Clear Dply*/
-		delay(100);  				    								/*esperar 10ms*/	
+		delay(100);  				    								/*esperar 10ms*/
+		TCSR0.B.TDO = OFF;							/*led D12 OFF, termina la busqueda*/
 	} /*Fin loop ppal*/ 
 } /*Fin main*/

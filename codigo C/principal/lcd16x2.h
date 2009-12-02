@@ -2,7 +2,7 @@
 #define LCD16x2_H
 
 #include <reg56303.h>
-#include <string.h>
+
 
 #ifndef CPUCLK
 #define CPUCLK      67000000L   /* Hz */
@@ -77,6 +77,6 @@ void init_lcd(void);
 //int busy(void);
 
 /*Envia los datos que se escribiran en el display*/
-void dato_lcd(unsigned char *dato, short len);
+void dato_lcd(_Y unsigned char *dato, short len);
 
 #endif /*LCD16x2_H*/
