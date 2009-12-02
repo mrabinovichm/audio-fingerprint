@@ -5,8 +5,6 @@
 #define ON 1
 #define OFF 0
 
-short sw2;
-
 void init_sw(void);
 
 void _long_interrupt(IRQ_A) switch2(void);

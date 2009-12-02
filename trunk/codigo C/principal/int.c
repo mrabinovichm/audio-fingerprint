@@ -1,5 +1,7 @@
 #include "int.h"
 
+short sw2;
+
 void init_sw(void)
 {
 	//configuracion de prioridades de interrupcion

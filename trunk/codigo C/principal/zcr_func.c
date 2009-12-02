@@ -1,6 +1,8 @@
 #include "zcr_func.h"
 #include "math.h"
 
+float *ptr_huella;
+float *ptr_h_fin;
 
 //**********************************************************************************************************
 //***************** Funcion que halla el signo del valor que es pasado como parametro **********************
@@ -10,9 +12,9 @@ int signo(_fract x)
 {
 	_fract cero = 0;
 
-	if (x > cero) return 1;
-	if (x < cero) return -1;
-	if (x == cero) return 0;
+	if(x > cero)  {return 1;}
+	if(x < cero)  {return -1;}
+	if(x == cero) {return 0;}
 }
 //**********************************************************************************************************
 
@@ -60,6 +62,7 @@ short fundamentales(int *ceros)
 
 short busqueda(float *h)
 {
+	h++; /*esta linea hay que sustituirla por el codigo que falta implementar*/
 	return 0;
 }
 //**********************************************************************************************************

@@ -104,7 +104,7 @@ void init_lcd(void)
                                                                                                                     
                                                                                                                       
 /*Envia los datos que se escribiran en el display*/                                                                  
-void dato_lcd(unsigned char *dato, short len)
+void dato_lcd(_Y unsigned char *dato, short len)
 {
 	short i;
 

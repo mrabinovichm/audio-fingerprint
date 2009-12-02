@@ -10,8 +10,6 @@
 #define  	q		597							/*cantidad de muestras de fo = (L-tr_g)/tr_c*/
 #define 	T 		3							/*cantidad de tramos de 5ms*/
 
-float *ptr_huella;
-float *ptr_h_fin;
 
 int signo(_fract x);
 int zcr(_fract *s, int largo);
