@@ -4,7 +4,8 @@
 #include "zcr_func.h"
 #include "int.h"
 
-#define LARGO 32
+#define LARGO 		32
+#define NRO_HUELLAS 3
 
 
 /* ***************** Mensajes a desplegar y sus largos en display ********************** */
@@ -18,13 +19,23 @@
  	 _Y unsigned char enya[]      = "Enya:           Only Time       ";
 	 _Y unsigned char oasis[]     = "Oasis:          Headshrinker    ";
 	 _Y unsigned char van_halen[] = "Van Halen:      Eruption        ";
+
+	 _Y unsigned char *dply[NRO_HUELLAS] = {enya, oasis, van_halen};
+/* ********************************************************************************** */
+
+/* ********************** Base de datos de huellas conocidas ************************ */
+  	 _Y float h_enya[]      = {0};
+	 _Y float h_oasis[]     = {0};
+	 _Y float h_van_halen[] = {0};
+
+	 _Y float *h_conocidas[NRO_HUELLAS] = {h_enya, h_oasis, h_van_halen};
 /* ********************************************************************************** */
 
 /* ********** Buffers y punteros para los datos de entrada desde el codec *********** */
 	_fract buffer_in0[S];
 	_fract buffer_in1[S];
 	_fract buffer_in2[S];
-
+																 
 	extern _fract *ptr_buffer;
 	_fract *ptr_fin;
 	_fract *ptr_ini;
@@ -125,23 +136,34 @@ la funcion fundamentales() calcula la frecuencia fundamental de 3 tramos de
 			uso_buff = uso_buff % 3;			
 		}
 		disable_interrupts();
-		resultado = busqueda(huella);					  /*busca la huella en la base*/
+		resultado = busqueda(huella, (float **)h_conocidas, NRO_HUELLAS);
 	
 		write_lcd(CLEAR, CTRL_WR);	    						  /*comando Clear Dply*/
 		delay(100);
-		switch(resultado)
+		if(resultado != -1)
 		{
-			case 0 : dato_lcd(h_no_enc, LARGO);
-					 break;
-			case 1 : dato_lcd(h_enc, LARGO);
-					 delay(20000);
-					 write_lcd(CLEAR, CTRL_WR);	    			  /*comando Clear Dply*/
-					 delay(100);  				    					/*esperar 10ms*/       
-					 dato_lcd(ptr_resp, LARGO);
-					 break;
-			default: dato_lcd(error, LARGO);
-					 break;
-		}												   	
+			dato_lcd(h_enc, LARGO);                                                   
+ 			delay(20000);                                                              
+ 			write_lcd(CLEAR, CTRL_WR);	    			  		  /*comando Clear Dply*/        
+ 			delay(100);  				    					        /*esperar 10ms*/        
+ 			dato_lcd(dply[resultado], LARGO);
+		}
+		else
+			dato_lcd(h_no_enc, LARGO);
+
+/* 		switch(resultado)                                                                       */
+/* 		{                                                                                       */
+/* 			case 0 : dato_lcd(h_no_enc, LARGO);                                                 */
+/* 					 break;                                                                     */
+/* 			case 1 : dato_lcd(h_enc, LARGO);                                                    */
+/* 					 delay(20000);                                                              */
+/* 					 write_lcd(CLEAR, CTRL_WR);	    			  /*comando Clear Dply*/        
+/* 					 delay(100);  				    					/*esperar 10ms*/        
+/* 					 dato_lcd(ptr_resp, LARGO);                                                 */
+/* 					 break;                                                                     */
+/* 			default: dato_lcd(error, LARGO);                                                    */
+/* 					 break;                                                                     */
+/* 		}	                                                                                    */											   	
 		delay(5000);
 		write_lcd(CLEAR, CTRL_WR);	    						  /*comando Clear Dply*/
 		delay(100);  				    								/*esperar 10ms*/

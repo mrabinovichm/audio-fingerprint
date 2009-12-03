@@ -14,6 +14,6 @@
 int signo(_fract x);
 int zcr(_fract *s, int largo);
 short fundamentales(int *ceros);
-short busqueda(float *h);
+short busqueda(float *h, float **base_de_datos, short tam_bd);
 
 #endif 
