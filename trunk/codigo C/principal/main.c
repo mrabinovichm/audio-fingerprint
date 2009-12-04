@@ -24,19 +24,21 @@
 /* ********************************************************************************** */
 
 /* ********************** Base de datos de huellas conocidas ************************ */
-  	 _Y float h_enya[]      = {0};
-	 _Y float h_oasis[]     = {0};
-	 _Y float h_van_halen[] = {0};
+  	 _Y float h_enya[q];
+	 _Y float h_oasis[q];
+	 _Y float h_van_halen[q];
 
 	 _Y float *h_conocidas[NRO_HUELLAS] = {h_enya, h_oasis, h_van_halen};
 /* ********************************************************************************** */
 
 /* ********** Buffers y punteros para los datos de entrada desde el codec *********** */
-	_fract buffer_in0[S];
-	_fract buffer_in1[S];
-	_fract buffer_in2[S];
+	_fract _circ buffer_in0[S];
+	_fract _circ buffer_in1[S];
+	_fract _circ buffer_in2[S];
+
+	_fract _circ buffer_aux[2*S];	   /*buffer auxiliar para no sobreescribir memoria*/
 																 
-	extern _fract *ptr_buffer;
+	extern _fract _circ *ptr_buffer;
 	_fract *ptr_fin;
 	_fract *ptr_ini;
 	
@@ -45,7 +47,6 @@
 /* ***************** Buffers y punteros para el manejo de huellas ******************* */
 	float huella[q];		   				   /*muestras de frecuencias fundamentales*/
 	int ceros_tramo[T];		   					 /*cantidad de ceros en c/tramo de 5ms*/
-	short tramo_listo;		   							 /*flag que indica tramo lleno*/
 	_Y unsigned char *ptr_resp;   			   /*nombre de cancion a enviar al display*/
 	extern float *ptr_huella;
 	extern float *ptr_h_fin;
@@ -76,12 +77,13 @@ disable_interrupts();
 	for(;;) 
 	{
 		sw2 = 0;
-		resultado = 0;
+		resultado = -1;
 		uso_buff = 0;
 		h_lista = 0;
 		ptr_huella = huella;				 /*inicio el puntero al arreglo de frec f0*/
 		ptr_h_fin = ptr_huella + q;
-		
+		ptr_buffer = buffer_aux;			           
+
 		dato_lcd(sw_2, LARGO);
 		delay(1000);
 		enable_interrupts();
