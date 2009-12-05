@@ -7,7 +7,7 @@
 #define 	umbral	0.2					   		/*umbral de decision al comparar huellas*/
 #define 	W		720							/*cantidad de muestras equivalentes a tr_g segundos*/
 #define 	S		240							/*cantidad de muestras equivalentes a tr_c segundos*/
-#define  	q		597							/*cantidad de muestras de fo = (L-tr_g)/tr_c*/
+#define  	q		1197
 #define 	T 		3							/*cantidad de tramos de 5ms*/
 
 
