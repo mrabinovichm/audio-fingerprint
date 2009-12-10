@@ -32,7 +32,7 @@ int zcr(_fract *s, int largo)
 	
 	for (i=1; i<largo; i++) 
 	{
-		p  = *(s+i) * (*(s+i-1));
+		p  = (*(s+i)) * (*(s+i-1));
 		sg = signo(p);
 		if ((sg == -1) || (*(s+i) == 0))
 			z++;
@@ -80,64 +80,56 @@ float promedio(float *p, int largo)
 
 short correlacion(float *px,float *py)
 {                                                                   
- 	_fract r;                                                           	
-	float mx,my,suma,sumax,sumay,sigmax,sigmay,div;                                                       
- 	int k,m,l;                                                           
- 	float *px0,*py0,*finx,*finy;
-	
+ 	float r,mx,my,suma,sumax,sumay,d;                                                       
+ 	int k,m,ind,largo;                                                           
+ 	float *px0,*py0;
+	double mult;
+
 	int largox = q/3;
 	int largoy = q;
   
- 	finx = px + largox;                                            
- 	finy = py + largoy;                                                
-    
  	px0 = px;                                                          
- 	py0 = py;                                                          
-   
+ 	py0 = py;
+ 	
+ 	   
  	/* calculo de la media de las señales */
- 	mx = promedio(px0, largox); 	   
- 	my = promedio(py0, largoy);                                           
+   	mx = promedio(px0, largox); 	   
+ 	                                          
   
  	/* calculo de señales sin valor medio */
- 	while(px0 != finx)                                                 
- 	{                                                                  
- 		*px0 -= mx;                                                    
- 		px0++;                                                         
- 	}                                                                  
+ 	for (ind=0;ind<largox;ind++)
+	{
+		*(px0+ind) -= mx;
+	}
+ 	                                                        
    
- 	while(py0 != finy)                                                 
- 	{                                                                  
- 		*py0 -= my;                                                    
- 		py0++;                                                         
- 	}                                                                  
-    
-     sumax   = 0;
-     for (k=0; k<largox; k++) 
-     	sumax += (*(px+k)) * (*(px+k));                                                                    
+ 	sumax   = 0;
+    for (k=0; k<largox; k++) 
+    	sumax += (*(px+k)) * (*(px+k));  
+
+                                              
 
  	/* cuentas */
-	l = largoy-largox;
- 	for (m=0; m<l; m++)                                      
+	largo = largoy-largox+1;
+ 	for (m=0; m<largo; m++)                                      
     {                                                              
 		sumay   = 0;                                               
-     	sigmax  = 0;                                               
-     	sigmay  = 0;                                               
-     	suma    = 0;                                               
+     	suma    = 0;
+     	my = promedio((py+m), largox);                                               
      	for (k=0; k<largox; k++)                                             
        	{                                                      
-       		suma += (*(px+k)) * (*(py+k+m));                   
+       		suma += (*(px+k)) * (*(py+k+m)-my);                   
        		/* ******************** */
-       	   	sumay += (*(py+k+m)) * (*(py+k+m));                            
-		}                                                          
+       	   	sumay += (*(py+k+m)-my) * (*(py+k+m)-my);                            
+		}                                                      		    
                                                                   
-		/* ******************** */
-	    sigmax = sqrt(sumax/largox);                                   
-    	sigmay = sqrt(sumay/largox);                                   
-	    /* ******************** */                                     
-    	div = sigmax*sigmay*largox;                                        
-	    r = (_fract)(suma/div);
+		mult = (double)(sumax*sumay);
+    	d = (float)sqrt(mult);
+    	
+    	r = suma/d;
+
 	
-		if ((r>=0.8) || (r<-0.8)) return 1;
+		if (r>=UMBRAL) return 1;
 	}
 	
 	return 0;
