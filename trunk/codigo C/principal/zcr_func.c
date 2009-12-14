@@ -115,12 +115,14 @@ short correlacion(float *px,float *py)
     {                                                              
 		sumay   = 0;                                               
      	suma    = 0;
-     	my = promedio((py+m), largox);                                               
+		py0 = py+m;
+     	my = promedio(py0, largox);                                               
      	for (k=0; k<largox; k++)                                             
-       	{                                                      
-       		suma += (*(px+k)) * (*(py+k+m)-my);                   
+       	{   
+			*(py+k+m) -= my;
+       		suma += (*(px+k)) * (*(py+k+m));                   
        		/* ******************** */
-       	   	sumay += (*(py+k+m)-my) * (*(py+k+m)-my);                            
+       	   	sumay += (*(py+k+m)) * (*(py+k+m));                            
 		}                                                      		    
                                                                   
 		mult = (double)(sumax*sumay);
