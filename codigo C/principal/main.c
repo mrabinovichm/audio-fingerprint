@@ -32,9 +32,9 @@
 /* ********************************************************************************** */
 
 /* ********** Buffers y punteros para los datos de entrada desde el codec *********** */
-	_fract _circ buffer_in0[S];
-	_fract _circ buffer_in1[S];
-	_fract _circ buffer_in2[S];
+	_fract _circ buffer_in0[S+1];
+	_fract _circ buffer_in1[S+1];/*+1 para cumplir el while del llenado de los buffers*/
+	_fract _circ buffer_in2[S+1];
 
 	_fract _circ buffer_aux[2*S];	   /*buffer auxiliar para no sobreescribir memoria*/
 																 
@@ -52,13 +52,14 @@
 	extern float *ptr_h_fin;
 /* ********************************************************************************** */
 
+short h_lista ; 						/*indica que la huella generada está lista*/
 extern short sw2;
 	
 int main(void)
 {
 	short resultado;							   /*0 = no encontrada, 1 = encontrada*/
 	short uso_buff;									  /*indica numero de buffer en uso*/
-	short h_lista ; 						/*indica que la huella generada está lista*/
+
 			
 /* ************** Inicializa puerto, display, switch2, interrupciones  ************** */
 	init_gpio();						   /*inicializa puerto donde se conecta el lcd*/	
@@ -74,20 +75,26 @@ int main(void)
 	write_lcd(CLEAR, CTRL_WR);	    							  /*comando Clear Dply*/
 	delay(100);  				    									/*esperar 10ms*/
 	
+	sw2 = 0;
+	ptr_buffer = buffer_aux;			           
+	enable_interrupts();
+	dato_lcd(sw_2, LARGO);
+	delay(1000);
+	while(!sw2);									   /*sw2=1 arranca la busqueda*/	while(!sw2);									   /*sw2=1 arranca la busqueda*/
+
 	for(;;) 
 	{
-		sw2 = 0;
 		resultado = -1;
 		uso_buff = 0;
 		h_lista = 0;
 		ptr_huella = huella;				 /*inicio el puntero al arreglo de frec f0*/
-		ptr_h_fin = ptr_huella + q;
+		ptr_h_fin = ptr_huella + q/3;
 		ptr_buffer = buffer_aux;			           
 
-		dato_lcd(sw_2, LARGO);
-		delay(1000);
-		enable_interrupts();
-		while(!sw2);									   /*sw2=1 arranca la busqueda*/
+//		dato_lcd(sw_2, LARGO);
+//		delay(1000);
+//		enable_interrupts();
+//		while(!sw2);									   /*sw2=1 arranca la busqueda*/
 	 
 		disable_interrupts();
 		write_lcd(CLEAR, CTRL_WR);	    						  /*comando Clear Dply*/
@@ -102,19 +109,20 @@ la funcion fundamentales() calcula la frecuencia fundamental de 3 tramos de
 ************************************************************************************* */
 
 		ptr_buffer = buffer_in0;						  /*inicializo puntero buffer0*/
-		ptr_fin = ptr_buffer + S;
+		ptr_fin = buffer_in0 + (S-1); 
 		ptr_ini = buffer_in0;
 		
 		while(ptr_buffer < ptr_fin);				   /*espero hasta llenar el buffer*/
 		ptr_buffer = buffer_in1;						  /*inicializo puntero buffer1*/
-		ptr_fin = ptr_buffer + S;
+		ptr_fin = buffer_in1 + (S-1); 
 		ceros_tramo[1] = zcr(ptr_ini, S);						 /*ceros en un tramo 0*/
 		ptr_ini = buffer_in1;
 		while(ptr_buffer < ptr_fin);				   /*espero hasta llenar el buffer*/
 		ptr_buffer = buffer_in2;						  /*inicializo puntero buffer1*/
-		ptr_fin = ptr_buffer + S;
+		ptr_fin = buffer_in2 + (S-1); 
 		ceros_tramo[2] = zcr(ptr_ini, S);						 /*ceros en un tramo 1*/
-				
+
+			
 		while(!h_lista)
 		{
 			while(ptr_buffer < ptr_fin);			   /*espero hasta llenar el buffer*/
@@ -130,8 +138,8 @@ la funcion fundamentales() calcula la frecuencia fundamental de 3 tramos de
 						ptr_ini = buffer_in1;
 						break;
 				default: break;
-			}
-			ptr_fin = ptr_buffer + S;
+			}							  
+			ptr_fin = ptr_buffer + (S-1); /*no puedo sumar S porque ptr_buffer es circ*/
 			ceros_tramo[uso_buff] = zcr(ptr_ini, S);	    	   /*ceros en un tramo*/
 			h_lista = fundamentales(ceros_tramo);	  /*indica si la huella esta lista*/
 			uso_buff++;
@@ -155,6 +163,6 @@ la funcion fundamentales() calcula la frecuencia fundamental de 3 tramos de
 		delay(2000);
 		write_lcd(CLEAR, CTRL_WR);	    						  /*comando Clear Dply*/
 		delay(100);  				    								/*esperar 10ms*/
-		TCSR0.B.TDO = OFF;							/*led D12 OFF, termina la busqueda*/
+		//TCSR0.B.TDO = OFF;							/*led D12 OFF, termina la busqueda*/
 	} /*Fin loop ppal*/ 
 } /*Fin main*/
