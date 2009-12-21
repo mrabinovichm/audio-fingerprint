@@ -1,8 +1,11 @@
 #include "zcr_func.h"
 #include "math.h"
 
-float *ptr_huella;
-float *ptr_h_fin;
+
+_fract *ptr_huella;
+_fract *ptr_h_fin;
+//_fract correl[q-LHG+1]; //borrar
+
 
 //**********************************************************************************************************
 //***************** Funcion que halla el signo del valor que es pasado como parametro **********************
@@ -15,6 +18,8 @@ int signo(_fract x)
 	if(x > cero)  {return 1;}
 	if(x < cero)  {return -1;}
 	if(x == cero) {return 0;}
+
+	return 2; /*caso no valido, evita warning al compilar*/
 }
 //**********************************************************************************************************
 
@@ -48,7 +53,11 @@ int zcr(_fract *s, int largo)
 
 short fundamentales(int *ceros)
 {
-	*ptr_huella++ = (float)(ceros[0] + ceros[1] + ceros[2])/(2*tr_g) ;
+	float zero;
+
+	zero = ceros[0] + ceros[1] + ceros[2];
+	*ptr_huella++ = (_fract)(zero/480);
+
 	if(ptr_huella < ptr_h_fin)
 		return 0;
 	return 1;
@@ -60,16 +69,18 @@ short fundamentales(int *ceros)
 /* ********* Funcion que halla el promedio ******************************************** */
 /* ******************************************************************************************************** */
 
-float promedio(float *p, int largo)
+_fract promedio(_fract *p, int largo)
 {
 	int i;
-	float suma, prom;
+	float suma;
+	_fract prom;
+		
 	
 	suma = 0;
 
-	for (i=0;i<largo;i++) suma += *(p+i);
+	for (i=0;i<largo;i++) suma += (float) *(p+i)/largo;
 	
-	prom = (float)(suma/largo);
+	prom = (_fract)suma;	
 
 	return prom;
 }
@@ -78,60 +89,43 @@ float promedio(float *p, int largo)
 /* ********* Funcion que halla la correlacion entre dos señales******************************************** */
 /* ******************************************************************************************************** */
 
-short correlacion(float *px,float *py)
+short correlacion(_fract *px, _Y _fract *py, _fract media)
 {                                                                   
- 	float r,mx,my,suma,sumax,sumay,d;                                                       
- 	int k,m,ind,largo;                                                           
- 	float *px0,*py0;
+ 	float r,suma,sigmax,sigmay,d;                                                       
+ 	int k,m,largo;                                                           
+ 	_Y _fract *py0;	
 	double mult;
 
-	int largox = q/3;
-	int largoy = q;
-  
- 	px0 = px;                                                          
+	                                                          
  	py0 = py;
- 	
  	   
- 	/* calculo de la media de las señales */
-   	mx = promedio(px0, largox); 	   
- 	                                          
-  
- 	/* calculo de señales sin valor medio */
- 	for (ind=0;ind<largox;ind++)
-	{
-		*(px0+ind) -= mx;
-	}
- 	                                                        
-   
- 	sumax   = 0;
-    for (k=0; k<largox; k++) 
-    	sumax += (*(px+k)) * (*(px+k));  
+ 	sigmax = 0;
+    for (k=0; k<LHG; k++) 
+    	sigmax += (*(px+k)) * (*(px+k));  
 
                                               
-
- 	/* cuentas */
-	largo = largoy-largox+1;
+	/* cuentas */
+	largo = q-LHG+1;
  	for (m=0; m<largo; m++)                                      
     {                                                              
-		sumay   = 0;                                               
+		sigmay   = 0;                                               
      	suma    = 0;
 		py0 = py+m;
-     	my = promedio(py0, largox);                                               
-     	for (k=0; k<largox; k++)                                             
+     	for (k=0; k<LHG; k++)                                             
        	{   
-			*(py+k+m) -= my;
-       		suma += (*(px+k)) * (*(py+k+m));                   
+			suma += (*(px+k)) * (*(py+k+m)-media);                   
        		/* ******************** */
-       	   	sumay += (*(py+k+m)) * (*(py+k+m));                            
+       	   	sigmay += (*(py+k+m)-media) * (*(py+k+m)-media);                            
 		}                                                      		    
                                                                   
-		mult = (double)(sumax*sumay);
+		mult = (double)(sigmax*sigmay);
     	d = (float)sqrt(mult);
     	
     	r = suma/d;
 
-	
-		if (r>=UMBRAL) return 1;
+		//correl[m] = (_fract) r; //borrar
+
+	  	if (r>=UMBRAL) return 1;
 	}
 	
 	return 0;
@@ -143,14 +137,31 @@ short correlacion(float *px,float *py)
 //**************** Funcion que busca la huella pasada como parametro en la base de datos *******************
 //**********************************************************************************************************
 
-short busqueda(float *h, float **base_de_datos, short tam_bd)
+short busqueda(_fract *h, _Y _fract **base_de_datos, short tam_bd)
 {
 	short i;
-    for (i=0; i<tam_bd; i++)
+	_fract media;
+	
+
+
+	/* calculo de la media de la señal */
+   	media = promedio(h, LHG);
+
+	/* calculo de señal sin valor medio */
+ 	for (i=0; i<LHG; i++)
+	{
+		*(h+i) -= media;
+	}
+ 	                          
+
+	for (i=0; i<tam_bd; i++)
     {
-        if (correlacion(h, base_de_datos[i]) == 1)
+        if (correlacion(h, base_de_datos[i], media) == 1)
         	return i; 								/* índice en donde está el mensaje para el lcd */
     }
+	
     return -1; 										                 /* si no la encontró va un -1 */
 }
 /* ******************************************************************************************************* */
+
+

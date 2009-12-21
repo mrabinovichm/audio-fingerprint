@@ -10,11 +10,11 @@
 
 #define OUTPOLARITY (-1)     /* invert audio output (56xxxEVM HDPHNE output)  */
 
-#define FSAMPLE     48000    /* sampling frequency, Hz   */
+#define FSAMPLE     16000    /* sampling frequency, Hz   */
 
 #define ON  1
 #define OFF 0
-#define S   240				 /*a frecuencia fs=48Khz, intervalo de 5ms, son 240 muestras*/ 
+ 
 
 #define disable_interrupts() _asm("ori   #$03,mr")
 #define enable_interrupts()  _asm("andi  #$FC,mr")

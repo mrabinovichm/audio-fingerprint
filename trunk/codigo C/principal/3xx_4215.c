@@ -88,7 +88,7 @@ ssi_receive_err(void)
 static void _near _internal _reentrant _long_interrupt(IRQ_ESSI0_RCL)
 ssi_receive_ls(void)
 {
-//    rxdata_p = rxdata.b;
+    rxdata_p = rxdata.b;
 	*ptr_buffer++ = rxdata.d.i.audio_left;
 }
 
