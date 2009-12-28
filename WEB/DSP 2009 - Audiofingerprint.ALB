@@ -1,0 +1,2334 @@
+;
+; Album     28/12/2009 20:09:49
+; Copyright (C) 2009 Avanquest Software. All Rights Reserved.
+; Pages: 9 
+;
+begin
+	IxlaPhotoAlbum == 0
+	push_object IxlaPhotoAlbum
+	def ,`build_as`,`cssht`,yes,
+	def ,`col`,0,yes,
+	def ,`cur_page`,1,yes,
+	def ,`exterior`,`0 0`,no,
+	def ,`htm_footer`,`none`,yes,
+	def ,`htm_name`,`DSP_2009_-_Audiofingerprint`,yes,
+	def ,`htm_path`,`C:\Documents and Settings\facu\Mis documentos\Web Easy\Html\DSP-2009\`,yes,
+	def ,`htm_txc_alink`,`#004e9b`,yes,
+	def ,`htm_txc_nlink`,`#ffffff`,yes,
+	def ,`htm_txc_vlink`,`#a40000`,yes,
+	def ,`html_suffix`,`.HTM`,yes,
+	def ,`img_type`,`.JPG`,yes,
+	def ,`main_name`,`index.html`,yes,
+	def ,`main_page`,1,yes,
+	PG150039350 == 0
+	push_object PG150039350
+	OBJ150039350 == 0
+	push_object OBJ150039350
+	def ,`POINT00001`,16,126,
+	def ,`POINT00002`,784,454,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ150039350,
+	OBJ150039351 == 0
+	push_object OBJ150039351
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ150039351,
+	OBJ150039352 == 0
+	push_object OBJ150039352
+	def ,`POINT00001`,472,341,
+	def ,`POINT00002`,540,392,
+	def ,`htm_title`,#@Photo1{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 019.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10002`,`G_IMAGE`,OBJ150039352,
+	OBJ150039353 == 0
+	push_object OBJ150039353
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10003`,`G_TEXT`,OBJ150039353,
+	OBJ150039354 == 0
+	push_object OBJ150039354
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10004`,`G_LINE`,OBJ150039354,
+	OBJ150039355 == 0
+	push_object OBJ150039355
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10005`,`G_LINE`,OBJ150039355,
+	OBJ150039356 == 0
+	push_object OBJ150039356
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10006`,`G_BOX`,OBJ150039356,
+	OBJ150039357 == 0
+	push_object OBJ150039357
+	def ,`POINT00001`,468,136,
+	def ,`POINT00002`,800,161,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#14#Normal#0#0#0`,yes,
+	def ,`name`,`Audiofingerprint`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10007`,`G_TEXT`,OBJ150039357,
+	OBJ150039358 == 0
+	push_object OBJ150039358
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ150039358,
+	OBJ150039359 == 0
+	push_object OBJ150039359
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ150039359,
+	OBJ1500393510 == 0
+	push_object OBJ1500393510
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ1500393510,
+	OBJ1500393511 == 0
+	push_object OBJ1500393511
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ1500393511,
+	OBJ1500393512 == 0
+	push_object OBJ1500393512
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ1500393512,
+	OBJ1500393513 == 0
+	push_object OBJ1500393513
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ1500393513,
+	OBJ1500393514 == 0
+	push_object OBJ1500393514
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10014`,`G_IMAGE`,OBJ1500393514,
+	OBJ1500393515 == 0
+	push_object OBJ1500393515
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10015`,`G_IMAGE`,OBJ1500393515,
+	OBJ1500393519 == 0
+	push_object OBJ1500393519
+	def ,`POINT00001`,74,311,
+	def ,`POINT00002`,132,361,
+	def ,`name`,`Memoria
+proyecto`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10016`,`G_TEXT`,OBJ1500393519,
+	OBJ1500393520 == 0
+	push_object OBJ1500393520
+	def ,`POINT00001`,15,311,
+	def ,`POINT00002`,73,329,
+	def ,`link`,`title Fotos`,yes,
+	def ,`name`,`Fotos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10017`,`G_TEXT`,OBJ1500393520,
+	OBJ1500393521 == 0
+	push_object OBJ1500393521
+	def ,`POINT00001`,549,341,
+	def ,`POINT00002`,617,392,
+	def ,`htm_title`,#@Photo2{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 014.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10018`,`G_IMAGE`,OBJ1500393521,
+	OBJ1500393522 == 0
+	push_object OBJ1500393522
+	def ,`POINT00001`,626,341,
+	def ,`POINT00002`,694,392,
+	def ,`htm_title`,#@Photo3{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 018.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10019`,`G_IMAGE`,OBJ1500393522,
+	OBJ1500393523 == 0
+	push_object OBJ1500393523
+	def ,`POINT00001`,702,341,
+	def ,`POINT00002`,770,392,
+	def ,`htm_title`,#@Photo4{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\audiofingerprint 016.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10020`,`G_IMAGE`,OBJ1500393523,
+	OBJ1500393524 == 0
+	push_object OBJ1500393524
+	def ,`POINT00001`,33,165,
+	def ,`POINT00002`,443,263,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`La idea del proyecto es identificar señales de audio de forma única, en este caso a partir de su huella característica.
+
+Se inyecta una señal al DSP. Se halla la huella (*) de dicha señal. Se compara contra una base de datos de huellas pre-cargada en memoria. Se desplega el mensaje que corresponda en el display.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10021`,`G_TEXT`,OBJ1500393524,
+	OBJ1500393525 == 0
+	push_object OBJ1500393525
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10022`,`G_IMAGE`,OBJ1500393525,
+	OBJ1500393526 == 0
+	push_object OBJ1500393526
+	def ,`POINT00001`,33,282,
+	def ,`POINT00002`,173,300,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#8#Normal#0#0#0`,yes,
+	def ,`link`,`title Huella`,yes,
+	def ,`name`,`* ¿qué es una huella?`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10023`,`G_TEXT`,OBJ1500393526,
+	GTX182322 == 0
+	push_object GTX182322
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10024`,`G_TEXT`,GTX182322,
+	GTX182325 == 0
+	push_object GTX182325
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10025`,`G_TEXT`,GTX182325,
+	GTX182328 == 0
+	push_object GTX182328
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10026`,`G_TEXT`,GTX182328,
+	GTX150080950 == 0
+	push_object GTX150080950
+	def ,`POINT00001`,15,333,
+	def ,`POINT00002`,155,354,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`Arial#8#Normal#0#0#0`,yes,
+	def ,`name`,`Videos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10027`,`G_TEXT`,GTX150080950,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,46,yes,
+	def ,`title`,`Home`,yes,
+	pop_current_object
+	def ,`page001`,PG150039350,yes,
+	PG150039351 == 0
+	push_object PG150039351
+	OBJ1500393527 == 0
+	push_object OBJ1500393527
+	def ,`POINT00001`,16,126,
+	def ,`POINT00002`,784,454,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ1500393527,
+	OBJ1500393528 == 0
+	push_object OBJ1500393528
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ1500393528,
+	OBJ1500393529 == 0
+	push_object OBJ1500393529
+	def ,`POINT00001`,472,341,
+	def ,`POINT00002`,540,392,
+	def ,`htm_title`,#@Photo1{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 019.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10002`,`G_IMAGE`,OBJ1500393529,
+	OBJ1500393530 == 0
+	push_object OBJ1500393530
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10003`,`G_TEXT`,OBJ1500393530,
+	OBJ1500393531 == 0
+	push_object OBJ1500393531
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10004`,`G_LINE`,OBJ1500393531,
+	OBJ1500393532 == 0
+	push_object OBJ1500393532
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10005`,`G_LINE`,OBJ1500393532,
+	OBJ1500393533 == 0
+	push_object OBJ1500393533
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10006`,`G_BOX`,OBJ1500393533,
+	OBJ1500393534 == 0
+	push_object OBJ1500393534
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ1500393534,
+	OBJ1500393535 == 0
+	push_object OBJ1500393535
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ1500393535,
+	OBJ1500393536 == 0
+	push_object OBJ1500393536
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ1500393536,
+	OBJ1500393537 == 0
+	push_object OBJ1500393537
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ1500393537,
+	OBJ1500393538 == 0
+	push_object OBJ1500393538
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ1500393538,
+	OBJ1500393539 == 0
+	push_object OBJ1500393539
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ1500393539,
+	OBJ1500393540 == 0
+	push_object OBJ1500393540
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ1500393540,
+	OBJ1500393541 == 0
+	push_object OBJ1500393541
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10014`,`G_IMAGE`,OBJ1500393541,
+	OBJ1500393547 == 0
+	push_object OBJ1500393547
+	def ,`POINT00001`,549,341,
+	def ,`POINT00002`,617,392,
+	def ,`htm_title`,#@Photo2{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 014.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10015`,`G_IMAGE`,OBJ1500393547,
+	OBJ1500393548 == 0
+	push_object OBJ1500393548
+	def ,`POINT00001`,626,341,
+	def ,`POINT00002`,694,392,
+	def ,`htm_title`,#@Photo3{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 018.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10016`,`G_IMAGE`,OBJ1500393548,
+	OBJ1500393549 == 0
+	push_object OBJ1500393549
+	def ,`POINT00001`,702,341,
+	def ,`POINT00002`,770,392,
+	def ,`htm_title`,#@Photo4{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\audiofingerprint 016.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10017`,`G_IMAGE`,OBJ1500393549,
+	OBJ1500393550 == 0
+	push_object OBJ1500393550
+	def ,`POINT00001`,33,175,
+	def ,`POINT00002`,443,273,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`Una huella caraceriza completamente una señal, mediante un resumen de su contenido.
+
+En este caso la huella generada es un arreglo de frecuencias fundamentales definidas usando el algoritmo ZCR en tramos de la señal.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,OBJ1500393550,
+	OBJ1500393551 == 0
+	push_object OBJ1500393551
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10019`,`G_IMAGE`,OBJ1500393551,
+	OBJ1500393552 == 0
+	push_object OBJ1500393552
+	def ,`POINT00001`,468,136,
+	def ,`POINT00002`,800,161,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#14#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Huella`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10020`,`G_TEXT`,OBJ1500393552,
+	GTX182354 == 0
+	push_object GTX182354
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10021`,`G_TEXT`,GTX182354,
+	GTX182357 == 0
+	push_object GTX182357
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10022`,`G_TEXT`,GTX182357,
+	GTX182400 == 0
+	push_object GTX182400
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10023`,`G_TEXT`,GTX182400,
+	IMG150056870 == 0
+	push_object IMG150056870
+	def ,`POINT00001`,473,201,
+	def ,`POINT00002`,626,316,
+	def ,`name`,`\\VBOXSVR\compartida_vm\huellas\enya_n.JPG`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10024`,`G_IMAGE`,IMG150056870,
+	IMG150057130 == 0
+	push_object IMG150057130
+	def ,`POINT00001`,599,146,
+	def ,`POINT00002`,750,260,
+	def ,`name`,`\\VBOXSVR\compartida_vm\huellas\mozart_n.JPG`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10025`,`G_IMAGE`,IMG150057130,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,8,yes,
+	def ,`title`,`Huella`,yes,
+	pop_current_object
+	def ,`page002`,PG150039351,yes,
+	PG150039352 == 0
+	push_object PG150039352
+	OBJ1500393553 == 0
+	push_object OBJ1500393553
+	def ,`POINT00001`,16,126,
+	def ,`POINT00002`,784,454,
+	def ,`antialias`,36,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ1500393553,
+	OBJ1500393554 == 0
+	push_object OBJ1500393554
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ1500393554,
+	OBJ1500393555 == 0
+	push_object OBJ1500393555
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10002`,`G_LINE`,OBJ1500393555,
+	OBJ1500393556 == 0
+	push_object OBJ1500393556
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10003`,`G_LINE`,OBJ1500393556,
+	OBJ1500393557 == 0
+	push_object OBJ1500393557
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10004`,`G_BOX`,OBJ1500393557,
+	OBJ1500393558 == 0
+	push_object OBJ1500393558
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10005`,`G_IMAGE`,OBJ1500393558,
+	OBJ1500393559 == 0
+	push_object OBJ1500393559
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10006`,`G_IMAGE`,OBJ1500393559,
+	OBJ1500393560 == 0
+	push_object OBJ1500393560
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ1500393560,
+	OBJ1500393561 == 0
+	push_object OBJ1500393561
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ1500393561,
+	OBJ1500393562 == 0
+	push_object OBJ1500393562
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ1500393562,
+	OBJ1500393563 == 0
+	push_object OBJ1500393563
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ1500393563,
+	OBJ1500393564 == 0
+	push_object OBJ1500393564
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ1500393564,
+	OBJ1500393565 == 0
+	push_object OBJ1500393565
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ1500393565,
+	OBJ1500393570 == 0
+	push_object OBJ1500393570
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ1500393570,
+	GTX182404 == 0
+	push_object GTX182404
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10014`,`G_TEXT`,GTX182404,
+	GTX182407 == 0
+	push_object GTX182407
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10015`,`G_TEXT`,GTX182407,
+	GTX182410 == 0
+	push_object GTX182410
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10016`,`G_TEXT`,GTX182410,
+	GTX185033 == 0
+	push_object GTX185033
+	def ,`POINT00001`,468,136,
+	def ,`POINT00002`,800,161,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#14#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10017`,`G_TEXT`,GTX185033,
+	GTX185058 == 0
+	push_object GTX185058
+	def ,`POINT00001`,33,173,
+	def ,`POINT00002`,443,239,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Aquí puede descargar el programa principal completo en un único archivo comprimido. 
+
+Los archivos están todos programados en C.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,GTX185058,
+	GTX150060390 == 0
+	push_object GTX150060390
+	def ,`POINT00001`,33,259,
+	def ,`POINT00002`,173,277,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`Programa completo.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10019`,`G_TEXT`,GTX150060390,
+	GTX185456 == 0
+	push_object GTX185456
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10020`,`G_TEXT`,GTX185456,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,9,yes,
+	def ,`title`,`Código`,yes,
+	pop_current_object
+	def ,`page003`,PG150039352,yes,
+	PG150039353 == 0
+	push_object PG150039353
+	OBJ1500393571 == 0
+	push_object OBJ1500393571
+	def ,`POINT00001`,16,125,
+	def ,`POINT00002`,784,453,
+	def ,`antialias`,36,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ1500393571,
+	OBJ1500393572 == 0
+	push_object OBJ1500393572
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ1500393572,
+	OBJ1500393573 == 0
+	push_object OBJ1500393573
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10002`,`G_LINE`,OBJ1500393573,
+	OBJ1500393574 == 0
+	push_object OBJ1500393574
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10003`,`G_LINE`,OBJ1500393574,
+	OBJ1500393575 == 0
+	push_object OBJ1500393575
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10004`,`G_BOX`,OBJ1500393575,
+	OBJ1500393576 == 0
+	push_object OBJ1500393576
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10005`,`G_IMAGE`,OBJ1500393576,
+	OBJ1500393577 == 0
+	push_object OBJ1500393577
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10006`,`G_IMAGE`,OBJ1500393577,
+	OBJ1500393578 == 0
+	push_object OBJ1500393578
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ1500393578,
+	OBJ1500393579 == 0
+	push_object OBJ1500393579
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ1500393579,
+	OBJ1500393580 == 0
+	push_object OBJ1500393580
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ1500393580,
+	OBJ1500393581 == 0
+	push_object OBJ1500393581
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ1500393581,
+	OBJ1500393582 == 0
+	push_object OBJ1500393582
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ1500393582,
+	OBJ1500393583 == 0
+	push_object OBJ1500393583
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ1500393583,
+	OBJ1500393584 == 0
+	push_object OBJ1500393584
+	def ,`POINT00001`,50,164,
+	def ,`POINT00002`,214,183,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`link`,`title Códec`,yes,
+	def ,`name`,`Códec`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10013`,`G_TEXT`,OBJ1500393584,
+	OBJ1500393585 == 0
+	push_object OBJ1500393585
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10014`,`G_TEXT`,OBJ1500393585,
+	OBJ1500393586 == 0
+	push_object OBJ1500393586
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10015`,`G_TEXT`,OBJ1500393586,
+	OBJ1500393587 == 0
+	push_object OBJ1500393587
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10016`,`G_TEXT`,OBJ1500393587,
+	OBJ1500393588 == 0
+	push_object OBJ1500393588
+	def ,`POINT00001`,48,209,
+	def ,`POINT00002`,212,228,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`link`,`title ZCR - Búsqueda`,yes,
+	def ,`name`,`ZCR - Búsqueda`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10017`,`G_TEXT`,OBJ1500393588,
+	OBJ1500393589 == 0
+	push_object OBJ1500393589
+	def ,`POINT00001`,49,254,
+	def ,`POINT00002`,213,273,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`link`,`title Display`,yes,
+	def ,`name`,`Display`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,OBJ1500393589,
+	OBJ1500393590 == 0
+	push_object OBJ1500393590
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10019`,`G_IMAGE`,OBJ1500393590,
+	OBJ1500393591 == 0
+	push_object OBJ1500393591
+	def ,`POINT00001`,458,154,
+	def ,`POINT00002`,768,386,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 003.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10020`,`G_IMAGE`,OBJ1500393591,
+	GTX185501 == 0
+	push_object GTX185501
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10021`,`G_TEXT`,GTX185501,
+	def ,`java_events`,``,yes,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,13,yes,
+	def ,`title`,`Docs`,yes,
+	pop_current_object
+	def ,`page004`,PG150039353,yes,
+	PG150039354 == 0
+	push_object PG150039354
+	OBJ1500393592 == 0
+	push_object OBJ1500393592
+	def ,`POINT00001`,16,125,
+	def ,`POINT00002`,784,453,
+	def ,`antialias`,36,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ1500393592,
+	OBJ1500393593 == 0
+	push_object OBJ1500393593
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ1500393593,
+	OBJ1500393594 == 0
+	push_object OBJ1500393594
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10002`,`G_LINE`,OBJ1500393594,
+	OBJ1500393595 == 0
+	push_object OBJ1500393595
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10003`,`G_LINE`,OBJ1500393595,
+	OBJ1500393596 == 0
+	push_object OBJ1500393596
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10004`,`G_BOX`,OBJ1500393596,
+	OBJ1500393597 == 0
+	push_object OBJ1500393597
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10005`,`G_IMAGE`,OBJ1500393597,
+	OBJ1500393598 == 0
+	push_object OBJ1500393598
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10006`,`G_IMAGE`,OBJ1500393598,
+	OBJ1500393599 == 0
+	push_object OBJ1500393599
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ1500393599,
+	OBJ15003935100 == 0
+	push_object OBJ15003935100
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ15003935100,
+	OBJ15003935101 == 0
+	push_object OBJ15003935101
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ15003935101,
+	OBJ15003935102 == 0
+	push_object OBJ15003935102
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ15003935102,
+	OBJ15003935103 == 0
+	push_object OBJ15003935103
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ15003935103,
+	OBJ15003935104 == 0
+	push_object OBJ15003935104
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ15003935104,
+	OBJ15003935109 == 0
+	push_object OBJ15003935109
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ15003935109,
+	GTX182422 == 0
+	push_object GTX182422
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10014`,`G_TEXT`,GTX182422,
+	GTX182425 == 0
+	push_object GTX182425
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10015`,`G_TEXT`,GTX182425,
+	GTX182428 == 0
+	push_object GTX182428
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10016`,`G_TEXT`,GTX182428,
+	GTX185506 == 0
+	push_object GTX185506
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10017`,`G_TEXT`,GTX185506,
+	GTX185627 == 0
+	push_object GTX185627
+	def ,`POINT00001`,468,136,
+	def ,`POINT00002`,800,161,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#14#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Códec`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,GTX185627,
+	GTX185630 == 0
+	push_object GTX185630
+	def ,`POINT00001`,33,165,
+	def ,`POINT00002`,443,263,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Los datos para hallar la huella de la señal de entrada se obtuvieron a través del códec integrado en el DSP.
+
+Se guardan en tres buffers distintos, de modo que cada buffer que es llenado pasa a procesarse, y al mismo tiempo se llena el buffer siguiente.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10019`,`G_TEXT`,GTX185630,
+	def ,`java_events`,``,yes,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,14,yes,
+	def ,`title`,`Códec`,yes,
+	pop_current_object
+	def ,`page005`,PG150039354,yes,
+	PG150039355 == 0
+	push_object PG150039355
+	OBJ15003935110 == 0
+	push_object OBJ15003935110
+	def ,`POINT00001`,16,125,
+	def ,`POINT00002`,784,453,
+	def ,`antialias`,36,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ15003935110,
+	OBJ15003935111 == 0
+	push_object OBJ15003935111
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ15003935111,
+	OBJ15003935112 == 0
+	push_object OBJ15003935112
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10002`,`G_LINE`,OBJ15003935112,
+	OBJ15003935113 == 0
+	push_object OBJ15003935113
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10003`,`G_LINE`,OBJ15003935113,
+	OBJ15003935114 == 0
+	push_object OBJ15003935114
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10004`,`G_BOX`,OBJ15003935114,
+	OBJ15003935115 == 0
+	push_object OBJ15003935115
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10005`,`G_IMAGE`,OBJ15003935115,
+	OBJ15003935116 == 0
+	push_object OBJ15003935116
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10006`,`G_IMAGE`,OBJ15003935116,
+	OBJ15003935117 == 0
+	push_object OBJ15003935117
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ15003935117,
+	OBJ15003935118 == 0
+	push_object OBJ15003935118
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ15003935118,
+	OBJ15003935119 == 0
+	push_object OBJ15003935119
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ15003935119,
+	OBJ15003935120 == 0
+	push_object OBJ15003935120
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ15003935120,
+	OBJ15003935121 == 0
+	push_object OBJ15003935121
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ15003935121,
+	OBJ15003935122 == 0
+	push_object OBJ15003935122
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ15003935122,
+	OBJ15003935126 == 0
+	push_object OBJ15003935126
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+end
+begin
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ15003935126,
+	OBJ15003935127 == 0
+	push_object OBJ15003935127
+	def ,`POINT00001`,504,136,
+	def ,`POINT00002`,657,161,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#14#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`ZCR - Búsqueda`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10014`,`G_TEXT`,OBJ15003935127,
+	OBJ15003935128 == 0
+	push_object OBJ15003935128
+	def ,`POINT00001`,33,160,
+	def ,`POINT00002`,443,290,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`El algoritmo implementado para el cálculo de las frecuencias fundamentales en el tiempo es el de cruces por cero (ZCR).
+
+El mismo calcula la frecuencia fundamental de una señal a partir de los cruces por cero de la misma.
+
+La búsqueda de la huella en la base de datos se realiza mediante la función de correlación.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10015`,`G_TEXT`,OBJ15003935128,
+	OBJ15003935129 == 0
+	push_object OBJ15003935129
+	def ,`POINT00001`,504,232,
+	def ,`POINT00002`,644,253,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`algoritmo ZCR`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10016`,`G_TEXT`,OBJ15003935129,
+	OBJ15003935130 == 0
+	push_object OBJ15003935130
+	def ,`POINT00001`,504,256,
+	def ,`POINT00002`,644,274,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`correlación`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10017`,`G_TEXT`,OBJ15003935130,
+	OBJ15003935131 == 0
+	push_object OBJ15003935131
+	def ,`POINT00001`,504,201,
+	def ,`POINT00002`,644,241,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Bold#0#0#0`,yes,
+	def ,`name`,`Lecturas de interés:`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,OBJ15003935131,
+	GTX182447 == 0
+	push_object GTX182447
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10019`,`G_TEXT`,GTX182447,
+	GTX182450 == 0
+	push_object GTX182450
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10020`,`G_TEXT`,GTX182450,
+	GTX182453 == 0
+	push_object GTX182453
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10021`,`G_TEXT`,GTX182453,
+	GTX185510 == 0
+	push_object GTX185510
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10022`,`G_TEXT`,GTX185510,
+	def ,`java_events`,``,yes,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,11,yes,
+	def ,`title`,`ZCR - Búsqueda`,yes,
+	pop_current_object
+	def ,`page006`,PG150039355,yes,
+	PG150039356 == 0
+	push_object PG150039356
+	OBJ15003935132 == 0
+	push_object OBJ15003935132
+	def ,`POINT00001`,16,125,
+	def ,`POINT00002`,784,453,
+	def ,`antialias`,36,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ15003935132,
+	OBJ15003935133 == 0
+	push_object OBJ15003935133
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ15003935133,
+	OBJ15003935134 == 0
+	push_object OBJ15003935134
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10002`,`G_LINE`,OBJ15003935134,
+	OBJ15003935135 == 0
+	push_object OBJ15003935135
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10003`,`G_LINE`,OBJ15003935135,
+	OBJ15003935136 == 0
+	push_object OBJ15003935136
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10004`,`G_BOX`,OBJ15003935136,
+	OBJ15003935137 == 0
+	push_object OBJ15003935137
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10005`,`G_IMAGE`,OBJ15003935137,
+	OBJ15003935138 == 0
+	push_object OBJ15003935138
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10006`,`G_IMAGE`,OBJ15003935138,
+	OBJ15003935139 == 0
+	push_object OBJ15003935139
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ15003935139,
+	OBJ15003935140 == 0
+	push_object OBJ15003935140
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ15003935140,
+	OBJ15003935141 == 0
+	push_object OBJ15003935141
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ15003935141,
+	OBJ15003935142 == 0
+	push_object OBJ15003935142
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ15003935142,
+	OBJ15003935143 == 0
+	push_object OBJ15003935143
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ15003935143,
+	OBJ15003935144 == 0
+	push_object OBJ15003935144
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ15003935144,
+	OBJ15003935148 == 0
+	push_object OBJ15003935148
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ15003935148,
+	OBJ15003935149 == 0
+	push_object OBJ15003935149
+	def ,`POINT00001`,504,136,
+	def ,`POINT00002`,650,165,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#14#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Display`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10014`,`G_TEXT`,OBJ15003935149,
+	OBJ15003935150 == 0
+	push_object OBJ15003935150
+	def ,`POINT00001`,33,174,
+	def ,`POINT00002`,443,208,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Se diseñó e implementó una placa con un display para desplegar mensajes descriptivos de lo que sucede en tiempo de ejecución.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10015`,`G_TEXT`,OBJ15003935150,
+	OBJ15003935151 == 0
+	push_object OBJ15003935151
+	def ,`POINT00001`,482,179,
+	def ,`POINT00002`,761,388,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 013.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10016`,`G_IMAGE`,OBJ15003935151,
+	OBJ15003935152 == 0
+	push_object OBJ15003935152
+	def ,`POINT00001`,33,218,
+	def ,`POINT00002`,443,236,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`file \\VBOXSVR\compartida_vm\hojas_de_datos.tar.gz`,yes,
+	def ,`name`,`Manuales del display.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10017`,`G_TEXT`,OBJ15003935152,
+	OBJ15003935153 == 0
+	push_object OBJ15003935153
+	def ,`POINT00001`,33,241,
+	def ,`POINT00002`,443,259,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`file \\VBOXSVR\compartida_vm\PCB.tar.gz`,yes,
+	def ,`name`,`Pcb.`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,OBJ15003935153,
+	GTX182500 == 0
+	push_object GTX182500
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10019`,`G_TEXT`,GTX182500,
+	GTX182503 == 0
+	push_object GTX182503
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10020`,`G_TEXT`,GTX182503,
+	GTX182506 == 0
+	push_object GTX182506
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10021`,`G_TEXT`,GTX182506,
+	GTX185515 == 0
+	push_object GTX185515
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10022`,`G_TEXT`,GTX185515,
+	def ,`java_events`,``,yes,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,37,yes,
+	def ,`title`,`Display`,yes,
+	pop_current_object
+	def ,`page007`,PG150039356,yes,
+	PG150039357 == 0
+	push_object PG150039357
+	OBJ15003935154 == 0
+	push_object OBJ15003935154
+	def ,`POINT00001`,16,126,
+	def ,`POINT00002`,784,454,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ15003935154,
+	OBJ15003935155 == 0
+	push_object OBJ15003935155
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ15003935155,
+	OBJ15003935156 == 0
+	push_object OBJ15003935156
+	def ,`POINT00001`,472,341,
+	def ,`POINT00002`,540,392,
+	def ,`htm_title`,#@Photo1{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 019.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10002`,`G_IMAGE`,OBJ15003935156,
+	OBJ15003935157 == 0
+	push_object OBJ15003935157
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10003`,`G_TEXT`,OBJ15003935157,
+	OBJ15003935158 == 0
+	push_object OBJ15003935158
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10004`,`G_LINE`,OBJ15003935158,
+	OBJ15003935159 == 0
+	push_object OBJ15003935159
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10005`,`G_LINE`,OBJ15003935159,
+	OBJ15003935160 == 0
+	push_object OBJ15003935160
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10006`,`G_BOX`,OBJ15003935160,
+	OBJ15003935161 == 0
+	push_object OBJ15003935161
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ15003935161,
+	OBJ15003935162 == 0
+	push_object OBJ15003935162
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ15003935162,
+	OBJ15003935163 == 0
+	push_object OBJ15003935163
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ15003935163,
+	OBJ15003935164 == 0
+	push_object OBJ15003935164
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ15003935164,
+	OBJ15003935165 == 0
+	push_object OBJ15003935165
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ15003935165,
+	OBJ15003935166 == 0
+	push_object OBJ15003935166
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ15003935166,
+	OBJ15003935167 == 0
+	push_object OBJ15003935167
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ15003935167,
+	OBJ15003935168 == 0
+	push_object OBJ15003935168
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10014`,`G_IMAGE`,OBJ15003935168,
+	OBJ15003935172 == 0
+	push_object OBJ15003935172
+	def ,`POINT00001`,549,341,
+	def ,`POINT00002`,617,392,
+	def ,`htm_title`,#@Photo2{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 014.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10015`,`G_IMAGE`,OBJ15003935172,
+	OBJ15003935173 == 0
+	push_object OBJ15003935173
+	def ,`POINT00001`,626,341,
+	def ,`POINT00002`,694,392,
+	def ,`htm_title`,#@Photo3{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 018.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10016`,`G_IMAGE`,OBJ15003935173,
+	OBJ15003935174 == 0
+	push_object OBJ15003935174
+	def ,`POINT00001`,702,341,
+	def ,`POINT00002`,770,392,
+	def ,`htm_title`,#@Photo4{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\audiofingerprint 016.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10017`,`G_IMAGE`,OBJ15003935174,
+	OBJ15003935175 == 0
+	push_object OBJ15003935175
+	def ,`POINT00001`,33,182,
+	def ,`POINT00002`,443,264,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Daniel Aicardi - daicav@gmail.com
+
+Edgardo Vaz - edgardovaz@gmail.com
+
+Melina Rabinovich - mrabinovichm@gmail.com`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,OBJ15003935175,
+	OBJ15003935176 == 0
+	push_object OBJ15003935176
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10019`,`G_IMAGE`,OBJ15003935176,
+	OBJ15003935177 == 0
+	push_object OBJ15003935177
+	def ,`POINT00001`,468,136,
+	def ,`POINT00002`,800,161,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#14#Normal#0#0#0`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`name`,`Audiofingerprint`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10020`,`G_TEXT`,OBJ15003935177,
+	GTX182512 == 0
+	push_object GTX182512
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10021`,`G_TEXT`,GTX182512,
+	GTX182515 == 0
+	push_object GTX182515
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10022`,`G_TEXT`,GTX182515,
+	GTX182518 == 0
+	push_object GTX182518
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10023`,`G_TEXT`,GTX182518,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,3,yes,
+	def ,`title`,`Contactos`,yes,
+	pop_current_object
+	def ,`page008`,PG150039357,yes,
+	PG150039358 == 0
+	push_object PG150039358
+	OBJ15003935178 == 0
+	push_object OBJ15003935178
+	def ,`POINT00001`,16,126,
+	def ,`POINT00002`,784,454,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Panels\blackslab.gif`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10000`,`G_IMAGE`,OBJ15003935178,
+	OBJ15003935179 == 0
+	push_object OBJ15003935179
+	def ,`POINT00001`,16,338,
+	def ,`POINT00002`,403,391,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYDARK.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10001`,`G_IMAGE`,OBJ15003935179,
+	OBJ15003935180 == 0
+	push_object OBJ15003935180
+	def ,`POINT00001`,58,153,
+	def ,`POINT00002`,256,301,
+	def ,`htm_title`,#@Photo1{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 019.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10002`,`G_IMAGE`,OBJ15003935180,
+	OBJ15003935181 == 0
+	push_object OBJ15003935181
+	def ,`POINT00001`,31,400,
+	def ,`POINT00002`,402,434,
+	def ,`fgc`,`#ffffff`,yes,
+	def ,`font`,`Arial#10#Normal#0#0#0`,yes,
+	def ,`name`,`DSP 2009 - Audiofingerprint
+Daniel Aicardi - Edgardo Vaz - Melina Rabinovich`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10003`,`G_TEXT`,OBJ15003935181,
+	OBJ15003935182 == 0
+	push_object OBJ15003935182
+	def ,`POINT00001`,67,151,
+	def ,`POINT00002`,67,86,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10004`,`G_LINE`,OBJ15003935182,
+	OBJ15003935183 == 0
+	push_object OBJ15003935183
+	def ,`POINT00001`,67,86,
+	def ,`POINT00002`,416,85,
+	def ,`bgc`,`#000000`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_LINE`,yes,
+	pop_current_object
+	def ,`10005`,`G_LINE`,OBJ15003935183,
+	OBJ15003935184 == 0
+	push_object OBJ15003935184
+	def ,`POINT00001`,25,61,
+	def ,`POINT00002`,293,96,
+	def ,`fgc`,`red`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,2,yes,
+	def ,`type`,`G_BOX`,yes,
+	pop_current_object
+	def ,`10006`,`G_BOX`,OBJ15003935184,
+	OBJ15003935186 == 0
+	push_object OBJ15003935186
+	def ,`POINT00001`,16,322,
+	def ,`POINT00002`,422,375,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\GRAYLIGHT.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10007`,`G_IMAGE`,OBJ15003935186,
+	OBJ15003935187 == 0
+	push_object OBJ15003935187
+	def ,`POINT00001`,16,307,
+	def ,`POINT00002`,69,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ7.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10008`,`G_IMAGE`,OBJ15003935187,
+	OBJ15003935188 == 0
+	push_object OBJ15003935188
+	def ,`POINT00001`,73,307,
+	def ,`POINT00002`,126,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ6.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10009`,`G_IMAGE`,OBJ15003935188,
+	OBJ15003935189 == 0
+	push_object OBJ15003935189
+	def ,`POINT00001`,133,307,
+	def ,`POINT00002`,186,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ5.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10010`,`G_IMAGE`,OBJ15003935189,
+	OBJ15003935190 == 0
+	push_object OBJ15003935190
+	def ,`POINT00001`,195,307,
+	def ,`POINT00002`,248,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ4.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10011`,`G_IMAGE`,OBJ15003935190,
+	OBJ15003935191 == 0
+	push_object OBJ15003935191
+	def ,`POINT00001`,259,307,
+	def ,`POINT00002`,312,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ3.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10012`,`G_IMAGE`,OBJ15003935191,
+	OBJ15003935192 == 0
+	push_object OBJ15003935192
+	def ,`POINT00001`,327,307,
+	def ,`POINT00002`,380,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ2.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10013`,`G_IMAGE`,OBJ15003935192,
+	OBJ15003935193 == 0
+	push_object OBJ15003935193
+	def ,`POINT00001`,394,307,
+	def ,`POINT00002`,447,357,
+	def ,`antialias`,36,yes,
+	def ,`lock`,yes,yes,
+	def ,`name`,`Clipart\Rectangle\SQ1.GIF`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10014`,`G_IMAGE`,OBJ15003935193,
+	OBJ15003935198 == 0
+	push_object OBJ15003935198
+	def ,`POINT00001`,536,153,
+	def ,`POINT00002`,733,301,
+	def ,`htm_title`,#@Photo3{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\DSP 2009 018.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10015`,`G_IMAGE`,OBJ15003935198,
+	OBJ15003935199 == 0
+	push_object OBJ15003935199
+	def ,`POINT00001`,297,153,
+	def ,`POINT00002`,495,301,
+	def ,`htm_title`,#@Photo4{#,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\audiofingerprint 016.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10016`,`G_IMAGE`,OBJ15003935199,
+	OBJ15003935201 == 0
+	push_object OBJ15003935201
+	def ,`POINT00001`,418,56,
+	def ,`POINT00002`,465,113,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`black`,yes,
+	def ,`link`,`page first`,yes,
+	def ,`name`,`\\VBOXSVR\compartida_vm\DSP\huella111_invertida.jpg`,yes,
+	def ,`type`,`G_IMAGE`,yes,
+	pop_current_object
+	def ,`10017`,`G_IMAGE`,OBJ15003935201,
+	GTX195104 == 0
+	push_object GTX195104
+	def ,`POINT00001`,28,66,
+	def ,`POINT00002`,98,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Código`,yes,
+	def ,`name`,`Código`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10018`,`G_TEXT`,GTX195104,
+	GTX195107 == 0
+	push_object GTX195107
+	def ,`POINT00001`,118,66,
+	def ,`POINT00002`,188,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Docs`,yes,
+	def ,`name`,`Docs`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10019`,`G_TEXT`,GTX195107,
+	GTX195110 == 0
+	push_object GTX195110
+	def ,`POINT00001`,197,66,
+	def ,`POINT00002`,267,84,
+	def ,`bgc`,`gray`,yes,
+	def ,`fgc`,`#000000`,yes,
+	def ,`font`,`System#10#Normal#0#0#0`,yes,
+	def ,`justify`,`center`,yes,
+	def ,`line style`,`solid`,yes,
+	def ,`line width`,0,yes,
+	def ,`link`,`title Contactos`,yes,
+	def ,`name`,`Contactos`,yes,
+	def ,`type`,`G_TEXT`,yes,
+	pop_current_object
+	def ,`10020`,`G_TEXT`,GTX195110,
+	def ,`page bgc`,`#ff8000`,yes,
+	def ,`thumb`,39,yes,
+	def ,`title`,`Fotos`,yes,
+	pop_current_object
+	def ,`page010`,PG150039358,yes,
+	def ,`page_depth`,600,yes,
+	def ,`page_width`,800,yes,
+	def ,`row`,0,yes,
+	def ,`styles`,SCS150039350,yes,
+	def ,`win_size`,`maximized`,yes,
+	pop_current_object
+end
+
+;==EndOfFile==
