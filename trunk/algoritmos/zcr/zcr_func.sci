@@ -1,26 +1,30 @@
 //**********************************************************************************************************
 //**********************************************************************************************************
-//********************* Funciones implementadas para el algoritmo de cruces por cero ZCR *******************
+//***************************** Funciones implementadas ****************************************************
 //**********************************************************************************************************
 //**********************************************************************************************************
 
 
 //**********************************************************************************************************
-//********************* Obtenci�n de la se�al a partir de un archivo .WAV **********************************
+//********************* Obtención de la señal a partir de un archivo .WAV **********************************
 //**********************************************************************************************************
 //**********************************************************************************************************
 
 function[x, t, Fs] = wav(audio);
   
-  stacksize('max');
+  stacksize('max'); //tamaño del stack de memoria. si se tienen problemas de stack, es necesario cargar señales de menor longitud
 
   select audio,    
-        case 'enya'      then [x,Fs] = wavread("enya.wav"),
-        case 'oasis'     then [x,Fs] = wavread("oasis.wav"),
-        case 'van halen' then [x,Fs] = wavread("van halen.wav"),
-        case 'seno'      then [x,Fs] = seno(1000,44100),
-        case 'ruido'     then [x,Fs] = seno(1000,44100) + seno(12000,44100),
-      else disp('No se ha encontrado el archivo de audio'),
+        case 'enya'       then [x,Fs] = wavread("enya.wav"),
+        case 'oasis'      then [x,Fs] = wavread("oasis.wav"),
+        case 'van halen'  then [x,Fs] = wavread("van halen.wav"),
+        case 'olima'      then [x,Fs] = wavread("olimareños.wav"),
+        case 'zitarrosa'  then [x,Fs] = wavread("zitarrosa.wav"),
+        case 'curtidores' then [x,Fs] = wavread("curtidores.wav"),
+        case 'mozart'     then [x,Fs] = wavread("mozart.wav"),
+        case 'soda'       then [x,Fs] = wavread("sodaStereo.wav"),
+        case 'seno'       then [x,Fs] = seno(1000,44100),
+     else disp('No se ha encontrado el archivo de audio'),
   end 
 
   N=size(x,'*');           //cantidad de muestras
@@ -32,7 +36,7 @@ endfunction
 
 
 //**********************************************************************************************************
-//********** Funcion que haya los cruces por cero de una se�al que es pasada como parametro ****************
+//********** Funcion que haya los cruces por cero de una señal que es pasada como parametro ****************
 //**********************************************************************************************************
 //**********************************************************************************************************
 
@@ -41,7 +45,7 @@ function[z] = zcr(s);
     z=0;
     for(i=2:length(s)),
         
-        if(sign(s(i) * s(i-1)) == -1)
+        if(sign(s(i) * s(i-1)) == -1) //cada vez que hay un cambio de signo es que hubo un cruce por cero
             z = z + 1;
         end
     end 
@@ -53,7 +57,7 @@ endfunction
 
 //**********************************************************************************************************
 //**************** Funcion que realiza la correlacion entre dos vectores de muestras************************
-//**************x tiene menos de la mitad de muestras que y (ver condiciones de borde)**********************
+//**************************************(ver condiciones de borde)******************************************
 //**********************************************************************************************************
 //**********************************************************************************************************
 
@@ -66,28 +70,27 @@ nx = length(x);
 ny = length(y);
 r = [];
 
-for l=1:ny-2*nx
-  for m=0:nx-1
-    sumax   = 0;
-    sumay   = 0;
-    sigmax  = 0;
-    sigmay  = 0;
-    suma    = 0;
-    for k=1:nx
-      yk = y(l:l+2*nx-1);
-      suma = suma + (x(k)*yk(m+k));
-      //*********************
-      sumax = sumax + (x(k)*x(k));
-      sumay = sumay + (yk(k)*yk(k));
-    end
+for m=1:ny-nx
+  sumax   = 0;
+  sumay   = 0;
+  sigmax  = 0;
+  sigmay  = 0;
+  suma    = 0;
+  for k=1:nx
+    yk = y(m:m+nx-1);               //tramo de y del tamaño de x
+    suma = suma + (x(k)*yk(k));
     //*********************
-    sigmax = sqrt(sumax/nx);
-    sigmay = sqrt(sumay/nx);
-    //*********************
-    div = sigmax*sigmay*nx;
-    r(l+m) = suma/div;
+    sumax = sumax + (x(k)*x(k));
+    sumay = sumay + (yk(k)*yk(k));
   end
+  //*********************
+  sigmax = sqrt(sumax/nx);
+  sigmay = sqrt(sumay/nx);
+  //*********************
+  div = sigmax*sigmay*nx;
+  r(m+1) = suma/div;
 end
+
 
 endfunction
 
@@ -109,10 +112,10 @@ mfprintf(fd,'{');
 mfprintf(fd,'%f', arreglo(1));
 
 for i=2:length(arreglo)
-  mfprintf(fd,',%f', arreglo(i));
+  mfprintf(fd,',%f',arreglo(i));
 end
 
-mfprintf(fd,'}');
+mfprintf(fd,'};');
    							   
 mclose(fd);
 
@@ -122,7 +125,7 @@ endfunction
 
 
 //**********************************************************************************************************
-//**************** Funcion que hace un seno de frecuencia f de 30 segundos**********************************
+//**************** Funcion que hace un seno de frecuencia f de tantos segundos como se quiera***************
 //**********************************************************************************************************
 
 function[x,fs] = seno(f,fs);
@@ -142,28 +145,29 @@ endfunction
 
 
 //**********************************************************************************************************
-//**************** Funcion que grafica una se�al que es pasada como par�metro y su FFT**********************
+//**************** Funcion que grafica una señal que es pasada como parámetro y su FFT**********************
 //**********************************************************************************************************
 
 function[y] = graf_fft(x, fs);
 
   N=size(x,'*');
   
-//Calculo de la transformada r�pida de Fourier FFT.
+  //Calculo de la transformada rápida de Fourier FFT.
   y=fft(x);                
+  
   //the fft response is symetric we retain only the first N/2 points
   f=fs*(0:(N/2))/N;        //associated frequency vector
   n=size(f,'*');
 
-//Graficas de la se�al normalizada vs tiempo y de la FFT
+  //Graficas de la señal normalizada vs tiempo y de la FFT
 
   subplot(2,2,1)
   plot2d(t,x(1,:))
-  xtitle('Se�al de audio','t(s)','amplitud');
+  xtitle('Señal de audio','t(s)','amplitud');
 
   subplot(2,2,2)
   plot2d(f,abs(y(1:n)))
-  xtitle('Transformada r�pida de Fourier (FFT)','f(Hz)');
+  xtitle('Transformada rápida de Fourier (FFT)','f(Hz)');
 
 endfunction
 
