@@ -3,7 +3,7 @@
 
 #include "zcr_func.h"
 
-/*Base de datos de huellas de audio*/
+/* Base de datos de huellas de audio */
 
 #define NRO_HUELLAS 2
 
@@ -159,7 +159,7 @@ _Y _fract h_enya[q] =
  0.0395833, 0.0354166, 0.0333333, 0.0249999,
  0.0395833};
 
-_Y _fract h_oasis[q] =
+/*_Y _fract h_oasis[q] =
 {0.2979166, 0.2895833, 0.2666666, 0.2541666,
  0.2458332, 0.2520833, 0.2583333, 0.2812500,
  0.2770832, 0.2666666, 0.2604166, 0.2520833,
@@ -311,7 +311,7 @@ _Y _fract h_oasis[q] =
  0.2020833, 0.1958333, 0.2000000, 0.1916666,
  0.1895833};
 
-/*_Y _fract h_van_halen[q] =
+_Y _fract h_van_halen[q] =
 {0.2791665, 0.2874999, 0.2708332, 0.2604166,
  0.2541666, 0.2687499, 0.2749999, 0.2708332,
  0.2479166, 0.2416665, 0.2479166, 0.2562499,
@@ -1070,7 +1070,7 @@ _Y _fract h_mozart[q] =
  0.0458333, 0.0458333, 0.0562499, 0.0708333,
  0.0770833, 0.0687500, 0.0708333, 0.0583332,
  0.0541666, 0.0416666, 0.0583332, 0.0729166,
- 0.0666666};
+ 0.0666666};*/
 
 
 _Y _fract h_soda[q] =
@@ -1223,10 +1223,10 @@ _Y _fract h_soda[q] =
  0.2166666, 0.2166666, 0.2145832, 0.2020833,
  0.1833332, 0.1937499, 0.1958333, 0.2104165,
  0.2041666, 0.1937499, 0.1770832, 0.1708333,
- 0.1541666};*/
+ 0.1541666};
 
 
-_Y _fract *h_conocidas[NRO_HUELLAS] = {h_enya, h_oasis/*, h_van_halen, h_olima, h_zitarrosa, h_curtidores, h_mozart, h_soda*/};
+_Y _fract *h_conocidas[NRO_HUELLAS] = {h_enya/*, h_oasis, h_van_halen, h_olima, h_zitarrosa, h_curtidores, h_mozart*/, h_soda};
 
 
 #endif /*BDH_H*/
