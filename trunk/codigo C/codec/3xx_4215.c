@@ -53,7 +53,7 @@ _Y _circ CS4215DATA txdata, rxdata;
 _Y _circ _fract *txdata_p = txdata.b;
 _Y _circ _fract *rxdata_p = rxdata.b;
 
-_fract *ptr_buffer;
+_fract _circ *ptr_buffer;
 
 /*------------------------------------------------------------------------------
  *  PURPOSE: Handle SSI receive (A/D converter) interrupt.
@@ -88,7 +88,7 @@ ssi_receive_err(void)
 static void _near _internal _reentrant _long_interrupt(IRQ_ESSI0_RCL)
 ssi_receive_ls(void)
 {
-//    rxdata_p = rxdata.b;
+    rxdata_p = rxdata.b;
 	*ptr_buffer++ = rxdata.d.i.audio_left;
 }
 
