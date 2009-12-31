@@ -1,0 +1,149 @@
+;Codewright Project File (do not remove or modify this line)
+[State]
+SysSetCwd='C:\Archivos de programa\TASKING\c563 v3.6r1\include'
+SrchSetFlags=0x0000600b
+SrchSetAgainFlags=0x00006003,0
+SrchSetAgainFlags=0x0200600b,1
+FileSortMode=0x0
+_StateHistory=FILELIST,'C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\lcd16x2.h','C:\Documents and Settings\Administrador\Escritorio\ppal0\main.src','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\bdh.h','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\zcr_func.h','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\main.c','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\zcr_func.c','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\lcd16x2.c','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\int.c','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\3xx_4215.c'
+_StateHistory=SEARCH,'1000.000000','1.000000','largox','largoy','sumax','sumay','aaro','omr'
+_StateHistory=REPLACE,'0.3333333','LHG','q','sigmax','sigmay'
+_StateHistory=EDITFILE,'C:\Documents and Settings\Administrador\Escritorio\loopinf\loopinf','C:\Documents and Settings\Administrador\Escritorio\correl\correl.pjt','C:\Documents and Settings\Administrador\Escritorio\correl\proof.pjt'
+_StateHistory=DIRECTORY,'C:\Documents and Settings\Administrador\Escritorio\loopinf\arch','C:\Documents and Settings\Administrador\Escritorio\ppal0\arch'
+_StateHistory=DOCUMENTVISIT,'26          1           C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\lcd16x2.c','28          1           C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\int.c','1           65          C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\zcr_func.c','26          1           C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\main.c','1           65          C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\zcr_func.c','19          34          C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\main.c','1           65          C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\zcr_func.c','28          1           C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\int.c','19          1           C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\lcd16x2.c','1           1           C:\Documents and Settings\Administrador\Escritorio\ppal0\arch\3xx_4215.c'
+_StateDocumentVisit=10
+
+[ProjInit]
+ConfigSetExtMode=2
+ProjSetConfigFlags=0x04110940
+
+[Editor]
+FilterProjDeleteList 
+FilterProjAdd='Source Files','*.c;*.cc;*.cpp;*.cxx;*.ic;*.c96;*.fle;*.cmp;*.asm;*.src;*.s;*.a96;*.i;*.pcp;*.68k',-1
+FilterProjAdd='Header Files','*.h;*.h68;*.inc;*.sfr',-1
+FilterProjAdd='Project Files','*.pjt',-1
+FilterProjAdd='Resources','*.rc;*.bmp;*.ico;*.cur;*.dlg',-1
+FilterProjAdd='Other Files','*.*',-1
+VCSProject=''
+VCSProjectPath=''
+VCSProjectLocalPath=''
+ScrapSetCount=1
+ClipboardSetCount=1
+ClipboardEnableSepStr=1
+ClipboardSetSepStr='\r\n',0
+ClipboardEnableTermStr=1
+ClipboardSetTermStr='\r\n',0
+
+[Tools]
+ToolDeleteList 
+ToolAddCmd='$_custom_tool_$_1','API Database Editor',1342177312,'cwtedit.exe'
+
+[Compiler]
+TagSetFile=''
+BrowseSetFile=''
+CompilerNewExt=.v
+CompilerNewExt=.src
+CompilerNewExt=.htm
+CompilerNewExt=.bas
+CompilerNewExt=.awk
+CompilerNewExt=.jsp
+CompilerNewExt=.cfml
+CompilerNewExt=.adb
+CompilerNewExt=.vhd
+CompilerNewExt=.pl
+CompilerNewExt=.pas
+CompilerNewExt=.tk
+CompilerNewExt=.rul
+CompilerNewExt=.asp
+CompilerNewExt=.js
+CompilerNewExt=.cob
+CompilerNewExt=.tcl
+CompilerNewExt=.rc
+CompilerNewExt=.php
+CompilerNewExt=.cc
+CompilerNewExt=.ini
+CompilerNewExt=.html
+CompilerNewExt=.bat
+CompilerNewExt=.cs
+CompilerNewExt=.txt
+CompilerNewExt=.nrx
+CompilerNewExt=.xml
+CompilerNewExt=.sqlj
+CompilerNewExt=.java
+TagSetCmd='"${HOME}${WTAGS}" -oc -d -t"${TAGFILE}.tag" -p"${TAGFILE}.ptg"',0x8000060
+
+[VersionControl:PVCS]
+VCSSetCmd=VCS_CHECKIN_ID,'put -n -T@"%Q" -M@"%Q" "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKINLOCK_ID,'put -n -T@"%Q" -M@"%Q" -l "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKOUT_ID,'get -y "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKOUTLOCK_ID,'get -y -l "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKLOCK_ID,'vcs -y -l "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKUNLOCK_ID,'vcs -y -u "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKLABEL_ID,'vcs -y -v"${VCSLABEL}" "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKLOG_ID,'vlog "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKPROP_ID,'vlog -b "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKDIFF_ID,'vdiff -r "%b%e"',0x8000040
+VCSSetCmd=VCS_CHECKMENU_ID,'pvcsvmwn',0x8000000
+VCSSetCmd=VCS_ADD_ID,'vcs -i -t@"%Q" "%b%e"',0x8000040
+VCSSetCmd=VCS_REMOVE_ID,'del /f "%b%{??v|___}e"',0x8000040
+
+[Files]
+.\arch\3xx_4215.c
+.\arch\cs4215.h
+.\arch\int.c
+.\arch\int.h
+.\arch\lcd16x2.c
+.\arch\lcd16x2.h
+.\arch\loopback.h
+.\arch\main.c
+.\arch\zcr_func.c
+.\arch\zcr_func.h
+.\arch\bdh.h
+
+[Ede]
+Toolchain=c:\archivos de programa\tasking\c563 v3.6r1\etc\c563.dol
+ToolchainName=TASKING Tools for DSP563xx v3.6r1
+ProjectDir=c:\documents and settings\administrador\escritorio\ppal0
+EdeVersion=99.9r9 (Build 150)
+CodeWrightVersion=6.5b
+DefBuildSettings=True
+SaveFiles=True
+AbsolutePathNames=False
+StopAfterError=True
+KeepTmpFiles=False
+ExtMakefile=False
+ExtMakefileName=
+UserMakefile=False
+UserMakefileName=
+UseMakeOptions=False
+MakeOptions=
+CheckTarget=True
+ExtDebugger=False
+ExtDebuggerName=
+UseDOSShell=False
+SaveOptionMethod=0
+SaveOptionFileName=
+LoadOptionFileName=
+LoadOptionStartup=False
+OptionsCPUSelectionMenu=0
+OptionsCPCompilerMenu=0
+OptionsCCompilerMenu=0
+OptionsAssemblerMenu=0
+OptionsLinkerLocatorMenu=0
+OptionsCrossViewProMenu=0
+GroupList=OptionsCPUSelectionMenu,OptionsCPCompilerMenu,OptionsCCompilerMenu,OptionsAssemblerMenu,OptionsLinkerLocatorMenu,OptionsCrossViewProMenu
+
+[Directories]
+BinDir1=$(PRODDIR)\bin
+IncDir1=$(PRODDIR)\include
+LibDir1=$(PRODDIR)\lib\563xx
+
+[DefaultOptions]
+CpuType=Cpu56303
+CStackLMemory=0
+CCompStackR6=1
+CCompMotAsm=1
+CompOptim=CompO0
+
+[Options]
+FileList=
