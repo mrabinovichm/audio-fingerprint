@@ -1,0 +1,258 @@
+/*--- Avanquest WebEasy Document Style ---*/
+
+*                   { /* All Elements */
+	margin          : 0px;
+	padding         : 0px;
+	}
+a:link              { /* Document Style */
+	color           : #ffffff;
+	}
+a:visited           { /* Document Style */
+	color           : #8f8f8f;
+	}
+a:hover             { /* Document Style */
+	color           : #c0c0c0;
+	}
+a:active            { /* Active Links */
+	color           : #FF0000;
+	}
+ol,ul               { /* All Lists */
+	margin          : 1em;
+	padding-left    : 2em;
+	}
+p                   { /* All Paragraphs */
+	margin-bottom   : 1em;
+	}
+p a                 {
+	background-color: transparent;
+	border          : 0px;
+	padding         : 0px;
+	}
+a.navigation:link   {
+	color           : #000000;
+	}
+a.navigation:visited{
+	color           : #6a6a6a;
+	}
+a.navigation:hover  {
+	color           : #ffffff;
+	}
+a.panel:link        {
+	color           : #ff8040;
+	}
+a.panel:visited     {
+	color           : #d54500;
+	}
+table.ct07          { /* Document Style */
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	background-color: #000000;
+	}
+table.ct07 caption  { /* Document Style */
+	color           : #ffffff;
+	font            : bold 10pt 'Arial', Helvetica, sans-serif;
+	}
+table.ct07 td       { /* Document Style */
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+table.ct07 th       { /* Document Style */
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	background-color: #000000;
+	}
+table.ct07 .ch07 th { /* Document Style */
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	background-color: #000000;
+	}
+.address,address    {
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.citation,cite      {
+	color           : #ffffff;
+	font            : italic 10pt 'Arial', Helvetica, sans-serif;
+	}
+.code,code          {
+	color           : #ffffff;
+	font            : 10pt 'Courier New', monospace;
+	}
+.deco               {
+	color           : #ff9460;
+	background-color: #ff9460;
+	}
+.emphasis,em        {
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.footer             {
+	color           : #ffffff;
+	font            : 8pt 'Arial', Helvetica, sans-serif;
+	text-align      : center;
+	}
+.footer_box         {
+	background-color: #ff8000;
+	}
+.form_button        {
+	color           : #000000;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.form_input         {
+	color           : #000000;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	border          :   0.75pt solid #000000;
+	}
+.form_label         {
+	color           : #000000;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.form_legend        {
+	color           : #000000;
+	font            : bold 10pt 'Arial', Helvetica, sans-serif;
+	}
+.form_set           {
+	color           : #000000;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	background-color: #ffffff;
+	}
+.header             {
+	color           : #ffffff;
+	font            : 18pt 'Arial', Helvetica, sans-serif;
+	}
+.header_box         {
+	background-color: #ff8000;
+	}
+.heading1,h1        {
+	color           : #ffffff;
+	font            : 22pt 'Arial', Helvetica, sans-serif;
+	}
+.heading2,h2        {
+	color           : #c0c0c0;
+	font            : 18pt 'Arial', Helvetica, sans-serif;
+	}
+.heading3,h3        {
+	color           : #c0c0c0;
+	font            : 14pt 'Arial', Helvetica, sans-serif;
+	}
+.heading4,h4        {
+	color           : #ffffff;
+	font            : 12pt 'Arial', Helvetica, sans-serif;
+	}
+.heading5,h5        {
+	color           : #ffffff;
+	font            : 11pt 'Arial', Helvetica, sans-serif;
+	}
+.heading5 a         {
+	background-color: transparent;
+	border          : 0px;
+	padding         : 0px;
+	}
+.heading6,h6        {
+	color           : #ffffff;
+	font            : bold 8pt 'Arial', Helvetica, sans-serif;
+	}
+.info               {
+	color           : #c0c0c0;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.info_box           {
+	background-color: #000000;
+	}
+.info_tag           {
+	color           : #c0c0c0;
+	font            : bold 10pt 'Arial', Helvetica, sans-serif;
+	}
+.item               {
+	color           : #ffffff;
+	font            : 10pt 'Arial Narrow', Helvetica, sans-serif;
+	}
+.item_box           {
+	background-color: #000000;
+	}
+.item_tag           {
+	color           : #ffffff;
+	font            : bold 10pt 'Arial Narrow', Helvetica, sans-serif;
+	}
+.logo               {
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.logo_box           {
+	background-color: #ff8000;
+	}
+.logo_tag           {
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.navigation         {
+	color           : #000000;
+	font            : 10pt 'Arial Narrow', Helvetica, sans-serif;
+	}
+.navigation a       {
+	background-color: transparent;
+	border          : 0px;
+	padding         : 0px;
+	}
+.navigation_box     {
+	background-color: #ff0000;
+	border          :   0.75pt solid #ff0000;
+	}
+.navigation_tag     {
+	color           : #000000;
+	font            : bold 10pt 'Arial Narrow', Helvetica, sans-serif;
+	}
+.news               {
+	color           : #ffffff;
+	font            : 9pt 'Arial', Helvetica, sans-serif;
+	}
+.news_box           {
+	background-color: #000000;
+	}
+.news_tag           {
+	color           : #ffffff;
+	font            : bold 9pt 'Arial', Helvetica, sans-serif;
+	}
+.page               {
+	color           : #ffffff;
+	font            : bold 10pt 'Arial Narrow', Helvetica, sans-serif;
+	background-color: #ff8000;
+	}
+.page_box           {
+	background-color: #000000;
+	}
+.page_tag           {
+	color           : #ffffff;
+	font            : 16pt 'Arial', Helvetica, sans-serif;
+	}
+.panel              {
+	color           : #ff8040;
+	font            : 10pt 'Arial Narrow', Helvetica, sans-serif;
+	background-color: #000000;
+	}
+.panel a            {
+	background-color: transparent;
+	border          : 0px;
+	padding         : 0px;
+	}
+.panel_box          {
+	background-color: #000000;
+	}
+.photo              {
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.photo_box          {
+	background-color: #ff8000;
+	}
+.photo_tag          {
+	color           : #ffffff;
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	}
+.small,small        {
+	color           : #ffffff;
+	font            : 8pt 'Arial', Helvetica, sans-serif;
+	}
+
+
+/*--- EndOfFile ---*/

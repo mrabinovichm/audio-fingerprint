@@ -1,0 +1,156 @@
+/*--- Avanquest WebEasy Page Style ---*/
+
+
+span#e18            { /* blackslab.gif */
+	background      : transparent url(blackslab.gif) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             :  94.50pt;
+	width           : 576.75pt;
+	height          : 246.75pt;
+	}
+span#e17            { /* audiofingerprint014012.j... */
+	background      : transparent url(audiofingerprint014012.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 253.50pt;
+	width           : 291.00pt;
+	height          :  40.50pt;
+	}
+span#e16            { /* audiofingerprint014011.g... */
+	border          :   0.00pt none #000000;
+	background      : transparent url(audiofingerprint014011.gif) no-repeat top left;
+	position        : absolute;
+	left            :  49.50pt;
+	top             :  63.75pt;
+	width           :   1.50pt;
+	height          :  51.00pt;
+	}
+span#e15            { /* audiofingerprint014010.g... */
+	border          :   0.00pt none #000000;
+	clip            : rect(0.00pt,264.00pt,2.25pt,0.00pt);
+	background      : transparent url(audiofingerprint014010.gif) no-repeat top left;
+	position        : absolute;
+	left            :  49.50pt;
+	top             :  63.00pt;
+	width           : 264.00pt;
+	height          :   2.25pt;
+	}
+span#e14            { /* audiofingerprint014009.g... */
+	border          :   0.00pt none #ff0000;
+	background      : transparent url(audiofingerprint014009.gif) no-repeat top left;
+	position        : absolute;
+	left            :  18.00pt;
+	top             :  45.00pt;
+	width           : 202.50pt;
+	height          :  27.75pt;
+	}
+span#e13            { /* audiofingerprint014008.j... */
+	background      : transparent url(audiofingerprint014008.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 241.50pt;
+	width           : 305.25pt;
+	height          :  40.50pt;
+	}
+span#e12            { /* audiofingerprint014007.j... */
+	background      : transparent url(audiofingerprint014007.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e11            { /* audiofingerprint014006.j... */
+	background      : transparent url(audiofingerprint014006.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  54.75pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e10            { /* audiofingerprint014005.j... */
+	background      : transparent url(audiofingerprint014005.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  99.75pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e9             { /* audiofingerprint014004.j... */
+	background      : transparent url(audiofingerprint014004.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 146.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e8             { /* audiofingerprint014003.j... */
+	background      : transparent url(audiofingerprint014003.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 194.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e7             { /* audiofingerprint014002.j... */
+	background      : transparent url(audiofingerprint014002.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 245.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e6             { /* audiofingerprint014001.j... */
+	background      : transparent url(audiofingerprint014001.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 295.50pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+div#e5              { /* Aquí está para descargar... */
+	text-align      : left;
+	position        : absolute;
+	left            : 357.75pt;
+	top             : 123.00pt;
+	width           : 212.25pt;
+	height          :  26.25pt;
+	}
+div#e4              { /* Código */
+	font            : 10pt 'System', monospace;
+	color           : #800000;
+	text-align      : center;
+	position        : absolute;
+	left            :  21.00pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+div#e3              { /* Docs */
+	text-align      : center;
+	position        : absolute;
+	left            :  88.50pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+div#e2              { /* Contactos */
+	text-align      : center;
+	position        : absolute;
+	left            : 147.75pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+img#e1              { /* audiofingerprint001001.j... */
+	position        : absolute;
+	left            : 313.50pt;
+	top             :  42.00pt;
+	width           :  36.00pt;
+	height          :  43.50pt;
+	}
+
+
+
+/*--- EndOfFile ---*/

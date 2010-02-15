@@ -1,0 +1,211 @@
+/*--- Avanquest WebEasy Page Style ---*/
+
+
+.cc33               { /* Common */
+	border          :   0.00pt none #000000;
+	}
+.cc34               { /* Common */
+	border          :   0.00pt none #000000;
+	clip            : rect(0.00pt,264.00pt,2.25pt,0.00pt);
+	}
+.cc35               { /* Common */
+	border          :   0.00pt none #808080;
+	}
+.cc36               { /* Common */
+	font            : 14pt 'Arial', Helvetica, sans-serif;
+	color           : #ffffff;
+	}
+.cc37               { /* Common */
+	font            : 10pt 'Arial', Helvetica, sans-serif;
+	color           : #ffffff;
+	}
+.cc38               { /* Common */
+	font            : bold 10pt 'Arial', Helvetica, sans-serif;
+	color           : #ffffff;
+	}
+.cc39               { /* Common */
+	font            : 10pt 'System', monospace;
+	color           : #000000;
+	text-align      : center;
+	}
+span#e23            { /* blackslab.gif */
+	background      : transparent url(blackslab.gif) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             :  93.75pt;
+	width           : 576.75pt;
+	height          : 246.75pt;
+	}
+span#e22            { /* graydark.gif */
+	background      : transparent url(graydark.gif) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 253.50pt;
+	width           : 291.00pt;
+	height          :  40.50pt;
+	}
+span#e21            { /* dsp_2009_-_audiofingerpr... */
+	background      : transparent url(dsp_2009_-_audiofingerprint006003.gif) no-repeat top left;
+	position        : absolute;
+	left            :  49.50pt;
+	top             :  63.75pt;
+	width           :   1.50pt;
+	height          :  51.00pt;
+	}
+span#e20            { /* dsp_2009_-_audiofingerpr... */
+	background      : transparent url(dsp_2009_-_audiofingerprint006002.gif) no-repeat top left;
+	position        : absolute;
+	left            :  49.50pt;
+	top             :  63.00pt;
+	width           : 264.00pt;
+	height          :   2.25pt;
+	}
+span#e19            { /* dsp_2009_-_audiofingerpr... */
+	background      : transparent url(dsp_2009_-_audiofingerprint006001.gif) no-repeat top left;
+	position        : absolute;
+	left            :  18.00pt;
+	top             :  45.00pt;
+	width           : 202.50pt;
+	height          :  27.75pt;
+	}
+span#e18            { /* graylight.gif */
+	background      : transparent url(graylight.gif) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 241.50pt;
+	width           : 305.25pt;
+	height          :  40.50pt;
+	}
+span#e17            { /* sq7.gif */
+	background      : transparent url(sq7.gif) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e16            { /* sq6.gif */
+	background      : transparent url(sq6.gif) no-repeat top left;
+	position        : absolute;
+	left            :  54.75pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e15            { /* sq5.gif */
+	background      : transparent url(sq5.gif) no-repeat top left;
+	position        : absolute;
+	left            :  99.75pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e14            { /* sq4.gif */
+	background      : transparent url(sq4.gif) no-repeat top left;
+	position        : absolute;
+	left            : 146.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e13            { /* sq3.gif */
+	background      : transparent url(sq3.gif) no-repeat top left;
+	position        : absolute;
+	left            : 194.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e12            { /* sq2.gif */
+	background      : transparent url(sq2.gif) no-repeat top left;
+	position        : absolute;
+	left            : 245.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e11            { /* sq1.gif */
+	background      : transparent url(sq1.gif) no-repeat top left;
+	position        : absolute;
+	left            : 295.50pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+img#e10             { /* dsp_2009_-_audiofingerpr... */
+	position        : absolute;
+	left            : 313.50pt;
+	top             :  42.00pt;
+	width           :  36.00pt;
+	height          :  43.50pt;
+	}
+div#e9              { /* ZCR - Búsqueda */
+	position        : absolute;
+	left            : 378.00pt;
+	top             : 102.00pt;
+	width           : 115.50pt;
+	height          :  19.50pt;
+	}
+div#e8              { /* El algoritmo implementad... */
+	position        : absolute;
+	left            :  24.75pt;
+	top             : 115.50pt;
+	width           : 308.25pt;
+	height          :  98.25pt;
+	}
+div#e7              { /* algoritmo ZCR */
+	position        : absolute;
+	left            : 378.00pt;
+	top             : 181.50pt;
+	width           : 105.75pt;
+	height          :  16.50pt;
+	}
+div#e6              { /* correlación */
+	position        : absolute;
+	left            : 378.00pt;
+	top             : 199.50pt;
+	width           : 105.75pt;
+	height          :  14.25pt;
+	}
+div#e5              { /* Lecturas de interés: */
+	position        : absolute;
+	left            : 378.00pt;
+	top             : 159.75pt;
+	width           : 105.75pt;
+	height          :  14.25pt;
+	}
+div#e4              { /* Código */
+	position        : absolute;
+	left            :  21.00pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+div#e3              { /* Docs */
+	position        : absolute;
+	left            :  88.50pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+div#e2              { /* Contactos */
+	position        : absolute;
+	left            : 147.75pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+div#e1              { /* DSP 2009 - Audio Fingerp... */
+	position        : absolute;
+	left            :  23.25pt;
+	top             : 300.00pt;
+	width           : 279.00pt;
+	height          :  26.25pt;
+	}
+body#page           { /* Page Body */
+	background-color: #ff8000;
+	}
+
+
+
+/*--- EndOfFile ---*/
