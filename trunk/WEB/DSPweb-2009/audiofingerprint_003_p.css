@@ -1,0 +1,172 @@
+/*--- Avanquest WebEasy Page Style ---*/
+
+
+span#e20            { /* blackslab.gif */
+	background      : transparent url(blackslab.gif) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             :  93.75pt;
+	width           : 576.75pt;
+	height          : 246.75pt;
+	}
+span#e19            { /* audiofingerprint003012.j... */
+	background      : transparent url(audiofingerprint003012.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 253.50pt;
+	width           : 291.00pt;
+	height          :  40.50pt;
+	}
+span#e18            { /* audiofingerprint003011.g... */
+	border          :   0.00pt none #000000;
+	background      : transparent url(audiofingerprint003011.gif) no-repeat top left;
+	position        : absolute;
+	left            :  49.50pt;
+	top             :  63.75pt;
+	width           :   1.50pt;
+	height          :  51.00pt;
+	}
+span#e17            { /* audiofingerprint003010.g... */
+	border          :   0.00pt none #000000;
+	clip            : rect(0.00pt,264.00pt,2.25pt,0.00pt);
+	background      : transparent url(audiofingerprint003010.gif) no-repeat top left;
+	position        : absolute;
+	left            :  49.50pt;
+	top             :  63.00pt;
+	width           : 264.00pt;
+	height          :   2.25pt;
+	}
+span#e16            { /* audiofingerprint003009.g... */
+	border          :   0.00pt none #ff0000;
+	background      : transparent url(audiofingerprint003009.gif) no-repeat top left;
+	position        : absolute;
+	left            :  18.00pt;
+	top             :  45.00pt;
+	width           : 202.50pt;
+	height          :  27.75pt;
+	}
+span#e15            { /* audiofingerprint003008.j... */
+	background      : transparent url(audiofingerprint003008.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 241.50pt;
+	width           : 305.25pt;
+	height          :  40.50pt;
+	}
+span#e14            { /* audiofingerprint003007.j... */
+	background      : transparent url(audiofingerprint003007.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  12.00pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e13            { /* audiofingerprint003006.j... */
+	background      : transparent url(audiofingerprint003006.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  54.75pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e12            { /* audiofingerprint003005.j... */
+	background      : transparent url(audiofingerprint003005.jpg) no-repeat top left;
+	position        : absolute;
+	left            :  99.75pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e11            { /* audiofingerprint003004.j... */
+	background      : transparent url(audiofingerprint003004.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 146.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e10            { /* audiofingerprint003003.j... */
+	background      : transparent url(audiofingerprint003003.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 194.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e9             { /* audiofingerprint003002.j... */
+	background      : transparent url(audiofingerprint003002.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 245.25pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+span#e8             { /* audiofingerprint003001.j... */
+	background      : transparent url(audiofingerprint003001.jpg) no-repeat top left;
+	position        : absolute;
+	left            : 295.50pt;
+	top             : 230.25pt;
+	width           :  40.50pt;
+	height          :  38.25pt;
+	}
+h5#e7               { /* Códec */
+	text-align      : left;
+	position        : absolute;
+	left            :  37.50pt;
+	top             : 123.00pt;
+	width           : 123.75pt;
+	height          :  15.00pt;
+	}
+div#e6              { /* Código */
+	text-align      : center;
+	position        : absolute;
+	left            :  21.00pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+div#e5              { /* Docs */
+	font            : 10pt 'System', monospace;
+	color           : #800000;
+	text-align      : center;
+	position        : absolute;
+	left            :  88.50pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+div#e4              { /* Contactos */
+	text-align      : center;
+	position        : absolute;
+	left            : 147.75pt;
+	top             :  49.50pt;
+	width           :  53.25pt;
+	height          :  14.25pt;
+	}
+h5#e3               { /* ZCR */
+	text-align      : left;
+	position        : absolute;
+	left            :  36.00pt;
+	top             : 156.75pt;
+	width           : 123.75pt;
+	height          :  15.00pt;
+	}
+h5#e2               { /* Display */
+	text-align      : left;
+	position        : absolute;
+	left            :  36.75pt;
+	top             : 190.50pt;
+	width           : 123.75pt;
+	height          :  15.00pt;
+	}
+img#e1              { /* audiofingerprint001001.j... */
+	position        : absolute;
+	left            : 313.50pt;
+	top             :  42.00pt;
+	width           :  36.00pt;
+	height          :  43.50pt;
+	}
+
+
+
+/*--- EndOfFile ---*/
